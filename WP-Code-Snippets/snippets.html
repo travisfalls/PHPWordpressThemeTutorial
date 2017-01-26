@@ -1,0 +1,3852 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Code Snippets Photoshop / PSD to WordPress Theme Development from Scratch</title>
+	<link rel="stylesheet" href="librerias/prism.css">
+	<script src="librerias/jquery-1.11.3.min.js"></script>
+	<script src="librerias/smooth-scroll.min.js"></script>
+	<script src="librerias/prism.js"></script>
+
+</head>
+<body>
+<header class="masthead">
+		<div class="wrapper">
+			<h1>Photoshop / PSD to WordPress Theme Development from Scratch</h1>
+			<div class="sub">
+				by: Juan Pablo de la torre Valdez ( @JuanDevWP ) <br/>
+				www.easy-webdev.com
+			</div>
+		</div>
+</header>
+
+  <nav id="toc" class="navigation">
+        <ul class="wrapper">
+
+			<li>
+				<a data-scroll href="#chapter-01">Chapter 1: What we´re going to build in this course</a>
+        		<ul>
+        			<li><a data-scroll  href="#video-0101">1.1 Intro Video</a></li>
+        			<li><a data-scroll  href="#video-0102">1.2 Theme 1 Basic - A City Blog</a></li>
+					<li><a data-scroll  href="#video-0103">1.3 Theme 2 Advanced - A Travel Agency WebSite</a></li>
+					<li><a data-scroll  href="#video-0104">1.4 About Code Snippets</a></li>
+					<li><a data-scroll  href="#video-0105">1.5 Photoshop Files for this Course</a></li>
+					<li><a data-scroll  href="#video-0106">1.6 Image Files for this Course</a></li>
+					<li><a data-scroll  href="#video-0107">1.7 Tools for this Course</a></li>
+        		</ul>
+        	</li> <!--.Chapter 01 -->
+
+			<li>
+				<a data-scroll href="#chapter-02">Chapter 2: Our First Theme (A City Blog) </a>
+        		<ul>
+        			<li><a data-scroll  href="#video-0201">2.1 Installing WordPress Locally</a></li>
+        			<li><a data-scroll  href="#video-0202">2.2 Creating WordPress Theme Files</a></li>
+							<li><a data-scroll  href="#video-0203">2.3 Reviewing the Theme Hierarchy</a></li>
+        		</ul>
+        	</li> <!--.Chapter 02 -->
+
+			<li>
+				<a data-scroll href="#chapter-03">Chapter 3: Working with the template files</a>
+        		<ul>
+        			<li><a data-scroll  href="#video-0301">3.01 The WordPress Loop</a></li>
+							<li><a data-scroll  href="#video-0302">3.02 Creating header File</a></li>
+							<li><a data-scroll  href="#video-0303">3.03 Creating footer.php File</a></li>
+							<li><a data-scroll  href="#video-0304">3.04 Creating all our pages</a></li>
+							<li><a data-scroll  href="#video-0305">3.05 Creating page.php</a></li>
+							<li><a data-scroll  href="#video-0306">3.06 WordPress Reading Adjustments</a></li>
+							<li><a data-scroll  href="#video-0307">3.07 Adding our Logo to thead Header</a></li>
+							<li><a data-scroll  href="#video-0308">3.08 Adding a Stylesheet and Creating functions.php file</a></li>
+							<li><a data-scroll  href="#video-0309">3.09 Adding our first styles</a></li>
+							<li><a data-scroll  href="#video-0310">3.10 Creating a Menu in WordPress</a></li>
+							<li><a data-scroll  href="#video-0311">3.11 Printing the Menu in our Theme</a></li>
+							<li><a data-scroll  href="#video-0312">3.12 Changing Menu Appeareance with CSS</a></li>
+							<li><a data-scroll  href="#video-0313">3.13 Creating a Sidebar</a></li>
+							<li><a data-scroll  href="#video-0314">3.14 Adding a Widget Zone</a></li>
+							<li><a data-scroll  href="#video-0315">3.15 Adding Widgets and Printing them in our Theme</a></li>
+							<li><a data-scroll  href="#video-0316">3.16 Changing CSS to Our Sidebar</a></li>
+							<li><a data-scroll  href="#video-0317">3.17 Adding a Featured Image</a></li>
+							<li><a data-scroll  href="#video-0318">3.18 Introduction to add_image_size() function</a></li>
+							<li><a data-scroll  href="#video-0319">3.19 Regenerate Thumbnails Plugin</a></li>
+							<li><a data-scroll  href="#video-0320">3.20 Checking if a Featured Image Exists and Printing</a></li>
+							<li><a data-scroll  href="#video-0321">3.21 Styling Featured Image with CSS</a></li>
+        		</ul>
+        	</li> <!--.Chapter 03 -->
+
+			<li>
+				<a data-scroll href="#chapter-04">Chapter 4: Adding Advanced Functionality to our Website</a>
+        		<ul>
+        			<li><a data-scroll  href="#video-0401">4.1 Writing a Custom Loop with WP_Query</a></li>
+        			<li><a data-scroll  href="#video-0402">4.2 More About WP_Query</a></li>
+							<li><a data-scroll  href="#video-0403">4.3 WordPress tags for printing content</a></li>
+							<li><a data-scroll  href="#video-0404">4.4 Styling our Blog with CSS</a></li>
+							<li><a data-scroll  href="#video-0405">4.5 Building the single.php file</a></li>
+							<li><a data-scroll  href="#video-0406">4.6 Template Tags to print content in single.php file</a></li>
+							<li><a data-scroll  href="#video-0407">4.7 Styling our single.php file with CSS</a></li>
+							<li><a data-scroll  href="#video-0408">4.8 Building the category.php file</a></li>
+							<li><a data-scroll  href="#video-0409">4.9 Adapting our blog template file</a></li>
+							<li><a data-scroll  href="#video-0410">4.10 Going Mobile First with Blog and Category</a></li>
+							<li><a data-scroll  href="#video-0411">4.11 Adding a Contact Form</a></li>
+							<li><a data-scroll  href="#video-0412">4.12 Changing Styles to our Contact Form</a></li>
+							<li><a data-scroll  href="#video-0413">4.13 Creating a front-page.php file</a></li>
+							<li><a data-scroll  href="#video-0414">4.14 Printing Latest 2 post in our Home Page</a></li>
+							<li><a data-scroll  href="#video-0415">4.15 Adding CSS to the latest 2 post</a></li>
+							<li><a data-scroll  href="#video-0416">4.16 Querying a Page and showing in front-page.php</a></li>
+							<li><a data-scroll  href="#video-0417">4.17 Adding a JavaScript file to our theme with functions.php</a></li>
+							<li><a data-scroll  href="#video-0418">4.18 Adding bxSlider to our Project</a></li>
+							<li><a data-scroll  href="#video-0419">4.19 Writing the Custom Loop to show latest entries in our Slider</a></li>
+							<li><a data-scroll  href="#video-0420">4.20 Adding a new Widget Zone</a></li>
+							<li><a data-scroll  href="#video-0421">4.21 Adding Image Widget Plugin</a></li>
+							<li><a data-scroll  href="#video-0422">4.22 Styling our widget images on front-page.php with CSS</a></li>
+							<li><a data-scroll  href="#video-0423">4.23 Creating Dynamic page titles for better SEO</a></li>
+							<li><a data-scroll  href="#video-0424">4.24 The get_template_part() function</a></li>
+							<li><a data-scroll  href="#video-0425">4.25 Screenshoot to Our Theme</a></li>
+							<li><a data-scroll  href="#video-0426">4.26 Reviewing the Finished Theme</a></li>
+        		</ul>
+        	</li> <!--.Chapter 04 -->
+
+
+			<li>
+				<a data-scroll href="#chapter-05">Chapter 5: Building Our Second Theme - A Travel Agency Website</a>
+        		<ul>
+						  <li><a data-scroll  href="#video-0500">5.0 Why use a WordPress Starter Theme?</a></li>
+        			<li><a data-scroll  href="#video-0501">5.1 Installing WordPress Locally</a></li>
+        			<li><a data-scroll  href="#video-0502">5.2 Downloading and Installing HTML5 Blank Theme</a></li>
+							<li><a data-scroll  href="#video-0503">5.3 Getting To Know HTML5 Blank Structure</a></li>
+							<li><a data-scroll  href="#video-0504">5.4 Reviewing the Files for this Theme (Images and PSD´s)</a></li>
+        		</ul>
+        	</li> <!--.Chapter 05 -->
+
+			<li>
+				<a data-scroll href="#chapter-06">Chapter 6: Preparing our theme for Development</a>
+        		<ul>
+        			<li><a data-scroll  href="#video-0601">6.1 Installing Developer Plugin</a></li>
+        			<li><a data-scroll  href="#video-0602">6.2 Adding all the Pages</a></li>
+							<li><a data-scroll  href="#video-0603">6.3 Adjustments to The Theme and Reading</a></li>
+							<li><a data-scroll  href="#video-0604">6.4 Creating the Main Menu</a></li>
+							<li><a data-scroll  href="#video-0605">6.5 Changing CSS to our Menu</a></li>
+							<li><a data-scroll  href="#video-0606">6.6 Installing Advanced Custom Fields Plugin</a></li>
+							<li><a data-scroll  href="#video-0607">6.7 Customizing the page.php</a></li>
+        		</ul>
+        	</li> <!--.Chapter 06 -->
+
+			<li>
+				<a data-scroll href="#chapter-07">Chapter 7: Working with About Us Page</a>
+        		<ul>
+        			<li><a data-scroll  href="#video-0701">7.1 Adding and Printing Featured Image</a></li>
+        			<li><a data-scroll  href="#video-0702">7.2 Adding an Advanced Featured Image</a></li>
+							<li><a data-scroll  href="#video-0703">7.3 CSS to our Featured Image</a></li>
+							<li><a data-scroll  href="#video-0704">7.4 Adding our first Fields to our About us</a></li>
+							<li><a data-scroll  href="#video-0705">7.5 Printing the Fields</a></li>
+							<li><a data-scroll  href="#video-0706">7.6 Checking if Field Exist before Printing</a></li>
+							<li><a data-scroll  href="#video-0707">7.7 Adding a new Image Size in functions.php</a></li>
+        			<li><a data-scroll  href="#video-0708">7.8 Adding a Class to our Image with PHP</a></li>
+						  <li><a data-scroll  href="#video-0709">7.9 Adding CSS to our Polaroid Class</a></li>
+ 					    <li><a data-scroll  href="#video-0710">7.10 Adjustments to Title and Text</a></li>
+					    <li><a data-scroll  href="#video-0711">7.11 Creating a Simple Grid for our Website</a></li>
+						</ul>
+        	</li> <!--.Chapter 07 -->
+
+
+					<li>
+						<a data-scroll href="#chapter-08">Chapter 08: Working with Tours Section</a>
+		        		<ul>
+									<li><a data-scroll  href="#video-0800">08.0 Taking a Look at Custom Post Types</a></li>
+		        			<li><a data-scroll  href="#video-0801">08.1 Installing Custom Post Type UI Plugin</a></li>
+		        			<li><a data-scroll  href="#video-0802">08.2 Creating Tours Custom Post Type</a></li>
+									<li><a data-scroll  href="#video-0803">08.3 Adding Fields with Advanced Custom Fields</a></li>
+									<li><a data-scroll  href="#video-0804">08.4 Adding some Tours to have data to work with</a></li>
+									<li><a data-scroll  href="#video-0805">08.5 Adding page-tours.php</a></li>
+									<li><a data-scroll  href="#video-0806">08.6 Writing a Custom Loop</a></li>
+									<li><a data-scroll  href="#video-0807">08.7 Printing Content to the template</a></li>
+		        			<li><a data-scroll  href="#video-0808">08.8 Changing CSS to our Page-tours.php</a></li>
+									<li><a data-scroll  href="#video-0809">08.9 Adding single-tours.php</a></li>
+									<li><a data-scroll  href="#video-0810">08.10 Printing Fields to single-tours.php</a></li>
+									<li><a data-scroll  href="#video-0811">08.11 Changing CSS to our Fields</a></li>
+									<li><a data-scroll  href="#video-0812">08.12 Creating a Gallery</a></li>
+									<li><a data-scroll  href="#video-0813">08.13 Adding jQuery Fancybox</a></li>
+									<li><a data-scroll  href="#video-0814">08.14 Adding the Code to our Gallery and WordPress</a></li>
+		        		</ul>
+		        	</li> <!--.Chapter 08 -->
+
+
+							<li>
+								<a data-scroll href="#chapter-09">Chapter 9: Working with Testimonials Section</a>
+							  		<ul>
+							  			<li><a data-scroll  href="#video-0901">09.1 Creating Testimonials Custom Post Type</a></li>
+							  			<li><a data-scroll  href="#video-0902">09.2 Adding fields with Advanced Custom Fields</a></li>
+											<li><a data-scroll  href="#video-0903">09.3 Adding some Testimonials to have data to work with</a></li>
+											<li><a data-scroll  href="#video-0904">09.4 Adding page-testimonials.php</a></li>
+											<li><a data-scroll  href="#video-0905">09.5 Writing a Custom Loop and Printing Fields</a></li>
+											<li><a data-scroll  href="#video-0906">09.6 Styling Testimonials with CSS</a></li>
+							  		</ul>
+							</li> <!--.Chapter 10-->
+
+
+			<li>
+				<a data-scroll href="#chapter-10">Chapter 10: Working with the Blog Template</a>
+        		<ul>
+							<li><a data-scroll  href="#video-1000">10.0 Adding some data to work with</a></li>
+        			<li><a data-scroll  href="#video-1001">10.1 Adding a Featured Image</a></li>
+        			<li><a data-scroll  href="#video-1002">10.2 Printing Our Fields</a></li>
+							<li><a data-scroll  href="#video-1003">10.3 Changing CSS to our Blog</a></li>
+							<li><a data-scroll  href="#video-1004">10.4 Changing single.php to suit our Needs</a></li>
+							<li><a data-scroll  href="#video-1005">10.5 Adding Sharing Buttons to single.php</a></li>
+        		</ul>
+        	</li> <!--.Chapter 09 -->
+
+
+
+
+			<li>
+				<a data-scroll href="#chapter-11">Chapter 11: Working with Contact Us Page</a>
+        		<ul>
+        			<li><a data-scroll  href="#video-1101">11.1 Installing Contact Form 7</a></li>
+        			<li><a data-scroll  href="#video-1102">11.2 Creating and Adding our Contact Form</a></li>
+							<li><a data-scroll  href="#video-1103">11.3 Changing CSS to our Form</a></li>
+        		</ul>
+        	</li> <!--.Chapter 11 -->
+
+
+
+
+			<li>
+				<a data-scroll href="#chapter-12">Chapter 12: Finishing Home Page</a>
+        		<ul>
+        			<li><a data-scroll  href="#video-1201">12.1 Creating front-page.php</a></li>
+        			<li><a data-scroll  href="#video-1202">12.2 Adding a Custom Post Type for Slider</a></li>
+							<li><a data-scroll  href="#video-1203">12.3 Adding bxSlider JS</a></li>
+							<li><a data-scroll  href="#video-1204">12.4 Adding some Slides to WordPress</a></li>
+							<li><a data-scroll  href="#video-1205">12.5 Adding an Action</a></li>
+							<li><a data-scroll  href="#video-1206">12.6 WP_Query and Printing Slider</a></li>
+							<li><a data-scroll  href="#video-1207">12.7 Finishing Up Slider with CSS</a></li>
+        			<li><a data-scroll  href="#video-1208">12.8 Changing Slides Order with a Plugin</a></li>
+							<li><a data-scroll  href="#video-1209">12.9 Writing Custom Loop to print Latest Tours</a></li>
+							<li><a data-scroll  href="#video-1210">12.10 Printing Tags and Fields to our front-page.php</a></li>
+							<li><a data-scroll  href="#video-1211">12.11 Dealing with Responsive Images in WordPress</a></li>
+							<li><a data-scroll  href="#video-1212">12.12 Changing CSS to our Latest tours</a></li>
+							<li><a data-scroll  href="#video-1213">12.13 Printing Latest Blog Entries</a></li>
+							<li><a data-scroll  href="#video-1214">12.14 Changing CSS to our latest entries</a></li>
+							<li><a data-scroll  href="#video-1215">12.15 Writing a loop to show testimonials in our Home Page</a></li>
+        			<li><a data-scroll  href="#video-1216">12.16 Styling our Testimonials in the home Page</a></li>
+							<li><a data-scroll  href="#video-1217">12.17 Finishing up the Footer</a></li>
+							<li><a data-scroll  href="#video-1218">12.18 Adding the About Us information in the Footer</a></li>
+							<li><a data-scroll  href="#video-1219">12.19 Printing Upcoming Travels in Footer with a Widget</a></li>
+							<li><a data-scroll  href="#video-1220">12.20 Printing Random blog Entries with a Widget</a></li>
+							<li><a data-scroll  href="#video-1221">12.21 Creating Coupons Post Type</a></li>
+        	    <li><a data-scroll  href="#video-1222">12.22 Printing the Coupons in the Footer with a Widget</a></li>
+							<li><a data-scroll  href="#video-1223">12.23 Styling the Footer</a></li>
+						</ul>
+        	</li> <!--.Chapter 12 -->
+
+			<li>
+				<a data-scroll href="#chapter-13">Chapter 13: Final Adjustments</a>
+        		<ul>
+        			<li><a data-scroll  href="#video-1301">13.1 Adding a Google Font</a></li>
+        			<li><a data-scroll  href="#video-1302">13.2 Adding a CSS3 Transition to our Menu</a></li>
+							<li><a data-scroll  href="#video-1303">13.3 Adding a Search Input to our Website</a></li>
+							<li><a data-scroll  href="#video-1304">13.4 Fixing the search Template</a></li>
+							<li><a data-scroll  href="#video-1305">13.5 Adding an Advanced Responsive Menu</a></li>
+							<li><a data-scroll  href="#video-1306">13.6 Styling the Responsive Menu</a></li>
+							<li><a data-scroll  href="#video-1307">13.7 Screenshot for our Theme</a></li>
+        		</ul>
+        	</li> <!--.Chapter 13 -->
+
+        </ul>
+    </nav>
+<div class="wrapper index">
+
+
+<section id="chapter-01" class="chapter">
+<h2 class="chapter-title">Chapter 1: What we´re going to build in this course</h2>
+
+	<article id="video-0101" class="video">
+	<h3 class="titulo">01.01 Intro Video</h3>
+	<h4>There´re no code snippets for this video</h4>
+	</article><!-- .movie -->
+
+	<article id="video-0102" class="video">
+	<h3 class="titulo">01.02 Theme 1 Basic - A City Blog</h3>
+	<h4>There´re no code snippets for this video</h4>
+	</article><!-- .movie -->
+
+	<article id="video-0103" class="video">
+	<h3 class="titulo">01.03 Theme 2 Advanced - A Travel Agency WebSite</h3>
+	<h4>There´re no code snippets for this video</h4>
+	</article><!-- .movie -->
+
+	<article id="video-0104" class="video">
+	<h3 class="titulo">01.04 About Code Snippets</h3>
+	<h4>There´re no code snippets for this video</h4>
+	</article><!-- .movie -->
+
+	<article id="video-0105" class="video">
+	<h3 class="titulo">01.05 Photoshop Files for this Course</h3>
+	<h4>There´re no code snippets for this video</h4>
+	</article><!-- .movie -->
+
+	<article id="video-0106" class="video">
+	<h3 class="titulo">01.06 Image Files for this Course</h3>
+	<h4>There´re no code snippets for this video</h4>
+	</article><!-- .movie -->
+
+
+	<article id="video-0107" class="video">
+	<h3 class="titulo">01.07 Tools for this Course</h3>
+	<h4>There´re no code snippets for this video</h4>
+	</article><!-- .movie -->
+
+</section>
+
+
+
+
+<section id="chapter-02" class="chapter">
+		<h2 class="chapter-title">Chapter 2: Our First Theme</h2>
+
+		<article id="video-0201" class="video">
+		<h3 class="titulo">02.01 Installing WordPress Locally</h3>
+		<h4>There´re no code snippets for this video</h4>
+		</article><!-- .movie -->
+
+		<article id="video-0202" class="video">
+		<h3 class="titulo">02.02 Creating WordPress Theme Files</h3>
+		<h4>on style.css</h4>
+		<pre><code class="language-markup">
+		/*
+		Theme Name: torontoOnlineWP
+		Theme URI:
+		Author: Juan Pablo De la torre
+		Author URI: http://www.easy-webdev.com
+		Description: My first wordpress Theme
+		Version: 1.0
+		Licence: GNU General Public licence or later
+		Tags: html5, css3, city, blog
+		*/
+		</code></pre>
+
+		<h4>On index.php</h4>
+
+		<pre><code class="language-markup">
+	  &lt;h1>Hello from template&lt;/h1>
+		</code></pre>
+		</article><!-- .movie -->
+
+		<article id="video-0203" class="video">
+		<h3 class="titulo">02.03 Reviewing the Theme Hierarchy</h3>
+		<h4>There´re no code snippets for this video</h4>
+		</article><!-- .movie -->
+
+</section>
+
+<section id="capitulo-03" class="chapter">
+<h2 class="chapter-title">Chapter 3: Working with Files</h2>
+
+	<article id="video-0301" class="video">
+	<h3 class="titulo">3.01 The WordPress Loop</h3>
+	<h4>On index.php</h4>
+	<pre><code class="language-php">
+	&lt;div id="primary" class="primary">
+
+		&lt;?php while(have_posts() ): the_post(); ?>
+
+		&lt;h2>&lt;?php the_title(); ?>&lt;/h2>
+
+		&lt;?php the_content(); ?>
+
+		&lt;?php endwhile; ?>
+
+	&lt;/div>
+	</code></pre>
+	</article><!-- .movie -->
+
+
+	<article id="video-0302" class="video">
+	<h3 class="titulo">03.02 Creating header.php file</h3>
+	<h4>On header.php</h4>
+	<pre><code class="language-php">
+
+		&lt;!DOCTYPE html>
+		&lt;html lang="&lt;?php language_attributes(); ?>">
+		&lt;head>
+			&lt;meta charset="UTF-8">
+			&lt;meta name="viewport" content="width=device-width, initial-scale=1">
+			&lt;title>WP Theme&lt;/title>
+		&lt;/head>
+		&lt;body>
+
+		&lt;div id="page">
+			&lt;div class="container content">
+	</code></pre>
+	</article><!-- .movie -->
+
+
+	<article id="video-0303" class="video">
+	<h3 class="titulo">03.03 Creating footer.php File</h3>
+	<h4>On footer.php</h4>
+	<pre><code class="language-php">
+
+		&lt;/div> &lt;!--#page -->
+
+		&lt;footer class="site-footer" role="contentinfo">
+			&lt;hr>
+			&lt;div class="copyright">
+				&lt;p>torontoOnline &lt;?php echo date('Y'); ?>&lt;/p>
+			&lt;/div>
+		&lt;/footer>
+	&lt;/body>
+	&lt;/html>
+	</code></pre>
+	</article><!-- .movie -->
+
+
+	<article id="video-0304" class="video">
+	<h3 class="titulo">03.04 Creating all our pages in WordPress</h3>
+	<h4>There are no Code Snippets for this video</h4>
+	</article><!-- .movie -->
+
+
+	<article id="video-0305" class="video">
+	<h3 class="titulo">03.05 Creating page.php</h3>
+	<h4>On page.php</h4>
+	<pre><code class="language-php">
+		&lt;?php get_header(); ?>
+			&lt;?php while(have_posts() ): the_post(); ?>
+				&lt;div id="primary" class="primary post-&lt;?php the_ID(); ?>">
+					&lt;?php the_content(); ?>
+				&lt;/div>
+			&lt;?php endwhile; ?>
+		&lt;?php get_sidebar(); ?>
+		&lt;?php get_footer(); ?>
+	</code></pre>
+	</article><!-- .movie -->
+
+	<article id="video-0306" class="video">
+	<h3 class="titulo">03.06 WordPress Reading Adjustments</h3>
+	<h4>There´re no Code Snippets for this video</h4>
+	</article><!-- .movie -->
+
+	<article id="video-0307" class="video">
+	<h3 class="titulo">03.07 Adding Logo to our Header</h3>
+	<h4>On header.php</h4>
+	<pre><code class="language-php">
+	&lt;header id="masthead" class="site-header" role="banner">
+		&lt;div class="container">
+			&lt;div class="logo">
+				&lt;a href="&lt;?php echo esc_url(home_url('/')); ?>">
+					&lt;img src="&lt;?php echo get_stylesheet_directory_uri(); ?>/img/logo.svg">
+				&lt;/a>
+			&lt;/div>
+	&lt;/header>
+	</code></pre>
+	</article><!-- .movie -->
+
+	<article id="video-0308" class="video">
+	<h3 class="titulo">03.08 Adding a Stylesheet and Creating functions.php file</h3>
+	<h4>On functions.php</h4>
+	<pre><code class="language-php">
+&lt;?php
+function torontoOnline_scripts() {
+	wp_enqueue_style('style', get_stylesheet_uri() );
+}
+add_action('wp_enqueue_scripts', 'torontoOnline_scripts');
+	</code></pre> <!-- end of code -->
+
+	<!-- begining of code -->
+	<h4>Then on header.php let´s add:</h4>
+	<pre><code class="language-php">
+&lt;?php wp_head(); ?>
+	</code></pre> <!-- end of code -->
+
+	<h4>Check if everything is working on style.css by adding</h4>
+	<pre><code class="language-css">
+body {
+	background-color:red;
+}
+	</code></pre> <!-- end of code -->
+	</article><!-- .movie -->
+
+
+	<article id="video-0309" class="video">
+	<h3 class="titulo">03.09 Adding our first styles</h3>
+	<h4>On style.css</h4>
+	<pre><code class="language-css">
+*,
+*:after,
+*:before {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  -webkit-tap-highlight-color: transparent;
+}
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, "Open Sans", sans-serif;
+  font-size: 140%;
+  line-height: 1.5;
+  color: #444444;
+  background-color: white;
+}
+.container {
+	width:95%;
+	margin: 0 auto;
+}
+.clear {
+	clear: both;
+}
+/** Resets UL **/
+ul {
+	padding: 0;
+	margin:0;
+	list-style:none;
+}
+img {
+	height: auto;
+	max-width: 100%;
+}
+a {
+	text-decoration: none;
+	color:#a00622;
+}
+/** End of resets **/
+
+
+/** Header **/
+header {
+	background-color: #a00622;
+	overflow:auto;
+}
+header .logo img{
+	margin:0 auto;
+	display: block;
+}
+h2{
+ 	font-size: 20px;
+ 	font-size: 2rem;
+ 	color: #a00622;
+ 	text-align: center;
+}
+h3 {
+	margin: 0;
+	padding: 0;
+	font-size:18px;
+	font-size:1.8rem;
+	color: #a00622;
+}
+p {
+	color: #000000;
+	font-size: 12px;
+	text-align: justify;
+}
+
+.content {
+	margin-top: 20px!important;
+}
+
+
+@media only screen and (min-width : 480px) {
+
+}
+
+@media only screen and (min-width : 768px) {
+
+}
+
+@media only screen and (min-width : 992px) {
+	.container {
+		width:990px;
+		margin: 0 auto;
+	}
+	/** Header **/
+	header .logo  {
+		float:left;
+	}
+}
+@media only screen and (min-width : 1200px)  {
+  .container {
+		width:1100px;
+		margin: 0 auto;
+	}
+}
+	</code></pre> <!-- end of code -->
+
+	<h4>On functions.php let´s add</h4>
+	<pre><code class="language-php">
+add_filter('show_admin_bar', '__return_false');
+	</code></pre>
+</article><!-- .movie -->
+
+	<article id="video-0310" class="video">
+	<h3 class="titulo">03.10 Creating a Menu</h3>
+	<h4>On functions.php</h4>
+	<pre><code class="language-php">
+	register_nav_menus(array(
+			'main_menu' => __('Main Menu', 'torontoOnline')
+	) );
+	</code></pre> <!-- end of code -->
+	</article><!-- .movie -->
+
+	<article id="video-0311" class="video">
+	<h3 class="titulo">03.11 Printing the Menu in our Theme</h3>
+	<h4>On header.php</h4>
+	<pre><code class="language-markup">
+	&lt;nav id="site-navigation" class="main-navigation" role="navigation">
+		&lt;?php wp_nav_menu( array( 'theme_location' => 'main_menu')); ?>
+	&lt;/nav>
+	</code></pre> <!-- end of code -->
+
+	<h4>On footer.php</h4>
+	<pre><code class="language-markup">
+	&lt;nav id="site-navigation" class="footer-navigation" role="navigation">
+		&lt;?php wp_nav_menu( array( 'theme_location' => 'main_menu')); ?>
+	&lt;/nav>
+	</code></pre> <!-- end of code -->
+	</article><!-- .movie -->
+
+
+	<article id="video-0312" class="video">
+	<h3 class="titulo">03.12 Changing Menu Appeareance with CSS</h3>
+	<h4>On style.css</h4>
+	<pre><code class="language-css">
+
+/** Header **/
+header {
+	background-color: #a00622;
+	overflow:auto;
+}
+header nav {
+	padding-bottom: 20px;
+}
+header nav ul {
+	list-style: none;
+	overflow: auto;
+}
+header nav ul li {
+	display: block;
+	width: 100%;
+	text-align: center;
+	margin-bottom: 5px;
+}
+header nav ul li.current_page_item {
+	border-bottom: 2px solid #fff;
+}
+header nav ul li a {
+	color: #ffffff;
+	font-size: 18px;
+	font-size: 1.8rem;
+	text-decoration: none;
+	padding: 5px 0;
+}
+	</code></pre> <!-- end of code -->
+
+	<h4>On the same file<h4>
+	<pre><code class="language-css">
+
+footer nav {
+	display: none;
+}
+footer hr {
+	border: 2px solid #a00622;
+}
+
+@media only screen and (min-width : 768px) {
+	header nav ul li {
+		display: inline;
+		margin-left: 20px;
+		padding-bottom: 0;
+	}
+}
+
+@media only screen and (min-width : 992px) {
+	header .logo {
+		width: 40%;
+		float:left;
+	}
+	header nav {
+		float: left;
+		width: 60%;
+		margin-top: 60px;
+	}
+	header nav ul {
+		float: right;
+	}
+	/** Footer **/
+	footer nav {
+		display: block;
+		margin-top: 30px;
+	}
+	footer nav ul li {
+		display: inline;
+		margin-right: 20px;
+	}
+	footer nav ul li a {
+		color: #a00622;
+		font-size: 16px;
+		font-size: 1.6rem;
+		text-decoration: none;
+	}
+}
+	</code></pre> <!-- end of code -->
+	</article><!-- .movie -->
+
+
+	<article id="video-0313" class="video">
+	<h3 class="titulo">03.13 Creating a Sidebar</h3>
+	<h4>On sidebar.php</h4>
+	<pre><code class="language-php">
+	&lt;div id="secondary" class="secondary">
+	&lt;/div>
+	&lt;div class="clear">&lt;/div>
+	</code></pre>
+
+	<h4>On page.php & index.php right after endwhile</h4>
+	<pre><code class="language-php">
+&lt;?php get_sidebar(); ?>
+	</code></pre>
+	</article><!-- .movie -->
+
+
+	<article id="video-0314" class="video">
+	<h3 class="titulo">03.14 Adding a Widget Zone</h3>
+	<h4>On functions.php</h4>
+	<pre><code class="language-php">
+function theme_widgets() {
+	register_sidebar( array(
+		'name' 				=> __('Sidebar Testimonials'),
+		'id'				=> 'testimonials',
+		'description'		=> 'Testimonial Widgets',
+		'before_widget' 	=> '&lt;aside id="%1$s" class="widget %2$s">',
+		'after_widget'		=> '&lt;/aside>',
+		'before_title' 		=> '&lt;h3 class="widget-title"	>',
+		'after_title'  		=> '&lt;/h3>',
+	) );
+}
+add_action('widgets_init', 'theme_widgets');
+	</code></pre>
+	</article><!-- .movie -->
+
+
+	<article id="video-0315" class="video">
+	<h3 class="titulo">03.15 Adding Widgets and Printing them in our Theme</h3>
+	<h4>On sidebar.php your code should look like this:</h4>
+	<pre><code class="language-markup">
+		&lt;div id="secondary" class="secondary">
+			&lt;div id="testimoniales">
+				&lt;?php dynamic_sidebar('testimonials'); ?>
+			&lt;/div>
+		&lt;/div>
+		&lt;div class="clear">&lt;/div>
+	</code></pre>
+	</article><!-- .movie -->
+
+	<article id="video-0316" class="video">
+	<h3 class="titulo">03.16 Changing CSS to Our Sidebar</h3>
+	<h4>On style.css<h4>
+	<pre><code class="language-css">
+	/** SIDEBAR */
+	#testimonials h3 {
+		color: #a00622;
+		font-size: 20px;
+	}
+	#testimonials .textwidget {
+		font-size: 20px;
+		line-height: 34px;
+		color: #767676;
+		background-image: url(img/svg_comilla.svg);
+		background-repeat: no-repeat;
+		background-position: left top ;
+		padding-left: 86px;
+		font-style: italic;
+	}
+	#testimonials .textwidget span {
+		display: block;
+		text-align: right;
+		font-style: normal;
+	}
+	</code></pre>
+	<h4>On style.css inside @media only screen and (min-width : 768px)<h4>
+	<pre><code class="language-css">
+		/*** Pages **/
+		.primary {
+			float: left;
+			width: 70%;
+			padding-right: 20px;
+		}
+		.secondary {
+			width: 30%;
+			float: right;
+			margin: 0;
+			clear: none;
+		}
+	</code></pre>
+	</article><!-- .movie -->
+
+	<article id="video-0317" class="video">
+	<h3 class="titulo">03.17 Adding a Featured Image</h3>
+	<h4>On functions.php<h4>
+	<pre><code class="language-php">
+add_theme_support('post-thumbnails');
+	</code></pre>
+	</article><!-- .movie -->
+
+	<article id="video-0318" class="video">
+	<h3 class="titulo">03.18 Introduction to add_image_size() function</h3>
+	<h4>On functions.php<h4>
+	<pre><code class="language-php">
+add_image_size('featured', 1100, 418, true);
+	</code></pre>
+	</article><!-- .movie -->
+
+	<article id="video-0319" class="video">
+	<h3 class="titulo">03.19 Regenerate Thumbnails Plugin</h3>
+	<h4>There´re no Code Snippets for this Movie<h4>
+	</article><!-- .movie -->
+
+	<article id="video-0320" class="video">
+	<h3 class="titulo">03.20 Checking if a Featured Image Exists and Printing</h3>
+	<h4>On Page.php<h4>
+		<pre><code class="language-php">
+	&lt;?php if (has_post_thumbnail() ) { ?>
+		&lt;div class="featured">
+			&lt;?php the_post_thumbnail('featured'); ?>
+			&lt;h2>&lt;?php the_title(); ?>&lt;/h2>
+		&lt;/div>
+	&lt;?php } else { ?>
+			&lt;h2 class="noimage">&lt;?php the_title(); ?>&lt;/h2>
+	&lt;?php } ?>
+		</code></pre>
+	</article><!-- .movie -->
+
+	<article id="video-0321" class="video">
+	<h3 class="titulo">03.21 Styling Featured Image with CSS</h3>
+	<h4>On style.css<h4>
+		<pre><code class="language-css">
+	/* FEATURED IMAGE */
+	.featured {
+		position: relative;
+		margin-bottom: 20px;
+	}
+	.featured h2 {
+		position: absolute;
+		left: 0;
+		bottom: 10px;
+		background-color: #a00622;
+		padding: 10px 15px;
+		color: #ffffff;
+	}
+	h2.noimage {
+		color: #a00622;
+		font-size: 30px;
+		text-align: center;
+		padding-top: 30px;
+		padding-bottom: 30px;
+		border:1px solid #a00622;
+	}
+		</code></pre>
+	</article><!-- .movie -->
+</section>
+
+
+<section id="chapter-04" class="chapter">
+		<h2 class="chapter-title">Chapter 4: Adding Advanced Functionality to our Website</h2>
+
+		<article id="video-0400" class="video">
+		<h3 class="titulo">04.00 Create some Post to have data to work with</h3>
+		<h4>There´re no Code Snippets for this Video</h4>
+		</article><!-- .movie -->
+
+		<article id="video-0401" class="video">
+		<h3 class="titulo">04.01 Writing a Custom Loop with WP_Query</h3>
+		<h4>On our new file page-advice.php</h4>
+		<pre><code class="language-php">
+	&lt;?php
+	/*
+		Template Name: Travel Tips
+	*/
+	 get_header(); ?>
+
+		&lt;?php while(have_posts() ): the_post(); ?>
+		&lt;?php if (has_post_thumbnail() ) { ?>
+			&lt;div class="featured">
+				&lt;?php the_post_thumbnail('featured'); ?>
+				&lt;h2>&lt;?php the_title(); ?>&lt;/h2>
+			&lt;/div>
+		&lt;?php } else { ?>
+				&lt;h2 class="noimage">&lt;?php the_title(); ?>&lt;/h2>
+		&lt;?php } ?>
+
+			&lt;div id="primary" class="primary">
+
+			&lt;/div>
+
+		&lt;?php endwhile; ?>
+	&lt;?php get_sidebar(); ?>
+	&lt;?php get_footer(); ?>
+		</code></pre>
+
+
+		<h4>Our new custom loop</h4>
+		<pre><code class="language-php">
+	&lt;?php $args = array(
+ 		'posts_per_page' => 5,
+ 		'orderby' => 'date',
+ 		'cat' => 3, // may change depending on your category number
+ 		'order' => 'DESC'
+ 	); ?>
+	&lt;?php $visit = new WP_Query($args); ?>
+	&lt;?php while($visit->have_posts() ): $visit->the_post(); ?>
+
+	&lt;?php print_r($visit); /* check if we have Query Succesfully WordPress */ ?>
+
+	&lt;?php endwhile; wp_reset_postdata(); ?>
+		</code></pre>
+
+	</article> <!--.movie-->
+
+
+		<article id="video-0402" class="video">
+		<h3 class="titulo">04.02 More About WP_Query</h3>
+		<h4>There´re no Snippets for this video<h4>
+		</article><!-- .movie -->
+
+		<article id="video-0403" class="video">
+		<h3 class="titulo">04.03 WordPress tags for printing content</h3>
+		<h4>On page-what-visit.php<h4>
+			<pre><code class="language-php">
+	&lt;ul class="blog-visit">
+	&lt;?php while($visit->have_posts() ): $visit->the_post(); ?>
+	&lt;li>
+
+	&lt;div class="featured">
+		&lt;a href="&lt;?php the_permalink(); ?>">
+			&lt;?php the_post_thumbnail(); ?>
+		&lt;/a>
+		&lt;?php the_category(', ');  ?>
+	&lt;/div>
+
+	&lt;div class="content">
+		&lt;h2>&lt;?php the_title(); ?>&lt;/h2>
+		&lt;?php the_excerpt(); ?>
+	&lt;/div>
+
+	&lt;div class="post-information">
+			&lt;div class="author">
+				By: &lt;?php the_author(); ?>
+			&lt;/div>
+			&lt;div class="date">By: &lt;?php the_time('F j, Y'); ?>&lt;/div>
+	&lt;/div>
+
+	&lt;/li>
+	&lt;?php endwhile; wp_reset_postdata(); ?>
+
+	&lt;/ul>
+			</code></pre>
+			<h4>On functions.php</h4>
+			<pre><code class="language-php">
+	 add_image_size('advice', 720, 380, true);
+			</code></pre>
+		</article><!-- .movie -->
+
+		<article id="video-0404" class="video">
+		<h3 class="titulo">04.04 Changing the CSS in our Blog</h>
+		<h4>On style.css<h4>
+			<pre><code class="language-css">
+/**First add */
+footer {
+	clear:both;
+}
+/** What To Visit **/
+
+ul.blog-visit li {
+	width: 100%;
+	padding: 5px;
+}
+
+ul.blog-visit li .featured {
+	position: relative;
+	margin-bottom: 0;
+}
+ul.blog-visit li .featured .category {
+	position: absolute;
+	top: 10px;
+	left:10px;
+}
+
+ul.blog-visit li .featured .category a {
+	text-decoration: none;
+	background-color: #a00622;
+	padding: 5px;
+	color: #fff;
+	font-size: 12px;
+	font-size: 1.2rem;
+	text-transform: lowercase;
+}
+
+ul.blog-visit li .content {
+	padding: 10px 20px;
+	margin-top: 0!important;
+}
+ul.blog-visit li .content  h2 {
+	margin: 0;
+	text-align: left;
+}
+ul.blog-visit li .content p {
+	font-size:14px;
+	font-size: 1.4rem;
+	text-align: justify;
+}
+
+ul.blog-visit li .post-information {
+	background-color: #ebebeb;
+	padding: 5px 20px;
+	overflow: auto;
+}
+ul.blog-visit li .post-information p {
+	font-size:14px;
+	font-size:1.4rem;
+	color: #000;
+}
+ul.blog-visit li .post-information div.author {
+	float: left;
+	width: 40%;
+}
+ul.blog-visit li .post-information div.author span {
+	color: #a00622;
+	font-weight: bold;
+}
+ul.blog-visit li .post-information div.date {
+	float: right;
+	width: 40%;
+	text-align: right;
+	font-weight: bold;
+}
+			</code></pre>
+
+			<h4>On MediaQueries<h4>
+				<pre><code class="language-css">
+@media only screen and (min-width : 480px) {
+	ul.blog-visit li{
+			float: left;
+			width:50%;
+	}
+}
+
+@media only screen and (min-width : 768px) {
+	ul.blog-visit li {
+		width: 33.3%;
+	}
+	.primary.no-sidebar {
+		width: 100%;
+	}
+}
+				</code></pre>
+		</article><!-- .movie -->
+
+		<article id="video-0405" class="video">
+		<h3 class="titulo">04.05 Building the single.php file</h>
+		<h4>On single.php<h4>
+			<pre><code class="language-php">
+	&lt;?php get_header(); ?>
+
+		&lt;?php while(have_posts() ): the_post(); ?>
+		&lt;?php if (has_post_thumbnail() ) { ?>
+			&lt;div class="featured">
+				&lt;?php the_post_thumbnail('featured'); ?>
+				&lt;h2>&lt;?php the_title(); ?>&lt;/h2>
+			&lt;/div>
+		&lt;?php } else { ?>
+				&lt;h2 class="noimage">&lt;?php the_title(); ?>&lt;/h2>
+		&lt;?php } ?>
+
+			&lt;div id="primary" class="primary">
+
+			&lt;/div>
+
+		&lt;?php endwhile; ?>
+	&lt;?php get_sidebar(); ?>
+	&lt;?php get_footer(); ?>
+			</code></pre>
+		</article><!-- .movie -->
+
+		<article id="video-0406" class="video">
+		<h3 class="titulo">04.06 Template Tags for single.php file</h>
+		<h4>On single.php<h4>
+			<pre><code class="language-php">
+&lt;article id="post-&lt;?php the_ID(); ?>" &lt;?php post_class(); ?>>
+	&lt;div class="written-info">
+		&lt;div class="column">
+		&lt;?php the_tags( __('Tags for this post: ', 'torontoOnline'), ', ', '&lt;br>'); ?>
+		&lt;/div>
+
+		&lt;div class="column">
+		&lt;?php _e('Category: ', 'torontoOnline'); the_category(', '); ?>&lt;br/>
+		&lt;/div>
+
+		&lt;div class="column">
+		&lt;?php _e('Written By: ', 'torontoOnline'); ?> &lt;span>&lt;?php the_author(); ?>
+		&lt;/div>
+		&lt;div class="clear">&lt;/div>
+	&lt;/div>
+	&lt;?php the_content(); ?>
+	&lt;?php comments_template(); ?>
+&lt;/article>
+&lt;?php edit_post_link(); ?>
+			</code></pre>
+		</article><!-- .movie -->
+
+
+		<article id="video-0407" class="video">
+		<h3 class="titulo">04.07 Changing CSS to our single.php</h>
+		<h4>On style.css<h4>
+			<pre><code class="language-css">
+/** Single Post */
+.single .written-info {
+	background-color: #ebebeb;
+	padding: 5px;
+	font-size: 12px;
+}
+.single .written-info .column {
+	float: left;
+	margin-right: 10px;
+}
+.single .written-info a,
+.single .written-info span{
+	color: #a00622;
+	text-decoration: none;
+	font-weight: bold;
+}
+.single textarea {
+	width: 100%;
+}
+			</code></pre>
+		</article><!-- .movie -->
+
+
+		<article id="video-0408" class="video">
+		<h3 class="titulo">04.08 Building the category.php file</h>
+		<h4>On category.php<h4>
+			<pre><code class="language-php">
+	&lt;?php get_header(); ?>
+
+	&lt;h1>&lt;?php _e('Category: ', 'torontoOnline') . single_cat_title(); ?> &lt;/h1>
+
+	&lt;div id="primary" class="primary post-&lt;?php the_ID(); ?>">
+		&lt;?php while(have_posts() ): the_post(); ?>
+
+			&lt;article>
+				&lt;a href="&lt;?php the_permalink(); ?>">
+					&lt;?php the_post_thumbnail('medium-blog'); ?>
+				&lt;/a>
+
+				&lt;div class="content-post">
+
+					&lt;h2>&lt;?php the_title(); ?>&lt;/h2>
+
+					&lt;?php the_excerpt(); ?>
+				&lt;/div>
+
+			&lt;/article>
+
+		&lt;?php endwhile; ?>
+	&lt;/div>
+
+	&lt;?php get_sidebar(); ?>
+
+	&lt;?php get_footer(); ?>
+			</code></pre>
+
+
+			<h4>On style.css<h4>
+				<pre><code class="language-css">
+/*** CATEGORY **/
+.category article {
+  clear: both;
+  margin-bottom: 20px;
+  overflow: auto;
+}
+.category article img{
+	float: left;
+	width: 40%;
+}
+.category article .content-post {
+	float: left;
+	width: 60%;
+	padding-left: 20px;
+}
+				</code></pre>
+
+		</article><!-- .movie -->
+
+		<article id="video-0409" class="video">
+		<h3 class="titulo">4.9 Adapting our blog template file</h>
+		<h4>On index.php<h4>
+			<pre><code class="language-php">
+	&lt;?php get_header(); ?>
+
+	&lt;div id="primary" class="primary post-&lt;?php the_ID(); ?>">
+		&lt;?php while(have_posts() ): the_post(); ?>
+
+			&lt;article>
+				&lt;a href="&lt;?php the_permalink(); ?>">
+					&lt;?php the_post_thumbnail('medium-blog'); ?>
+				&lt;/a>
+
+				&lt;div class="content-post">
+					&lt;h2>&lt;?php the_title(); ?>&lt;/h2>
+					&lt;?php the_category(); ?>
+
+					&lt;?php the_excerpt(); ?>
+				&lt;/div>
+
+			&lt;/article>
+
+		&lt;?php endwhile; ?>
+	&lt;/div>
+
+	&lt;?php get_sidebar(); ?>
+
+	&lt;?php get_footer(); ?>
+			</code></pre>
+
+			<h4>On style.css you should have some like this:<h4>
+				<pre><code class="language-css">
+	/*** CATEGORY **/
+	.blog article,
+	.category article {
+	  clear: both;
+	  margin-bottom: 20px;
+	  overflow: auto;
+	}
+	.blog article img,
+	.category article img{
+		float: left;
+		width: 40%;
+	}
+	.blog article .content-post,
+	.category article .content-post {
+		float: left;
+		width: 60%;
+		padding-left: 20px;
+	}
+				</code></pre>
+		</article><!-- .movie -->
+
+		<article id="video-0410" class="video">
+		<h3 class="titulo">4.10 Going Mobile First with Blog and Category</h>
+		<h4>On style.css<h4>
+			<pre><code class="language-css">
+	.blog article img,
+	.category article img{
+		width: 100%;
+	}
+	.blog article .content-post,
+	.category article .content-post {
+		width: 100%;
+	}
+	@media only screen and (min-width : 480px) {
+	.blog article img,
+	.category article img{
+		float: left;
+		width: 40%;
+	}
+	.blog article .content-post,
+	.category article .content-post {
+		float: left;
+		width: 60%;
+		padding-left: 20px;
+	}
+
+}
+			</code></pre>
+		</article><!-- .movie -->
+
+		<article id="video-0411" class="video">
+		<h3 class="titulo">4.11 Adding a Contact Form</h>
+		<h4>On the Form Tag for Contact Form 7<h4>
+			<pre><code class="language-markup">
+<p>Name* [text* your-name] </p>
+
+<p>Email* [email* your-email] </p>
+
+<p>Phone Number [tel phone-number] </p>
+
+<p>Message [textarea your-message] </p>
+
+<p>[submit "Send"]</p>
+			</code></pre>
+
+	<h4>On the Message Body Field in Mail Tab for Contact Form 7</h4>
+		<pre><code class="language-markup">
+From: [your-name] <[your-email]>
+Phone Number: [phone-number]
+
+Message Body:
+[your-message]
+
+--
+This e-mail was sent from a contact form on torontoOnline (http://localhost:8888/torontoOnline)</code>
+	</pre>
+		</article><!-- .movie -->
+
+		<article id="video-0412" class="video">
+		<h3 class="titulo">4.12 Changing Styles to our Contact Form</h>
+		<h4>On style.css<h4>
+			<pre><code class="language-php">
+/** Contact Form **/
+.page-id-17 .primary {
+	margin-bottom: 40px;
+}
+.page-id-17 h3 {
+	text-align: center;
+	font-size: 20px;
+	font-size: 2.0rem;
+	margin-bottom: 20px;
+}
+
+.wpcf7 {
+	background-color: #f2f2f2;
+	padding: 40px!important;
+	width: 100%;
+	margin: 0 auto!important;
+	display: block;
+	border-radius: 20px;
+	-webkit-box-shadow: 0px 20px 20px 0 rgba(0,0,0,.3);
+	box-shadow: 0px 20px 20px 0 rgba(0,0,0,.3);
+	margin-bottom: 50px;
+}
+
+.wpcf7 p {
+	font-size: 12px;
+	font-size: 1.2rem;
+	font-weight: bold;
+	color: #a00622;
+	margin-bottom: 15px;
+}
+.wpcf7 span {
+	display: block;
+	clear: both;
+}
+.wpcf7 input,
+.wpcf7 textarea {
+	height: 32px;
+	border: 1px solid #888;
+	border-radius: 8px;
+	width: 100%;
+}
+.wpcf7 textarea {
+	height: 200px;
+}
+.wpcf7 input[type="submit"] {
+	background-color: #a00622;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size:24px;
+	font-size: 2.4rem;
+	border-radius: 15px;
+	width: auto;
+	padding: 0 50px;
+	cursor: pointer;
+	color: #fff;
+}
+
+@media only screen and (min-width : 768px) {
+	.wpcf7 {
+		width: 60%;
+	}
+}
+			</code></pre>
+		</article><!-- .movie -->
+
+		<article id="video-0413" class="video">
+		<h3 class="titulo">4.13 Creating a front-page.php file</h>
+		<h4>There´re no code snippets for this video<h4>
+
+		</article><!-- .movie -->
+
+
+		<article id="video-0414" class="video">
+		<h3 class="titulo">4.14 Printing Latest 2 post to our HomePage</h>
+		<h4>On front-page.php<h4>
+			<pre><code class="language-php">
+&lt;div class="bottom-front-page">
+	&lt;div class="blog-tips">
+	&lt;h2>Tips to travel to toronto&lt;/h2>
+		&lt;?php $args = array(
+				'cat' => 4,
+				'posts_per_page'=>2,
+				'order' => 'DESC',
+				'orderby' => 'date'
+			); ?>
+
+		&lt;ul>
+			&lt;?php $travelTips = new WP_Query($args);  ?>
+			&lt;?php while($travelTips->have_posts() ): $travelTips->the_post(); ?>
+			&lt;li>
+			&lt;a href="&lt;?php the_permalink(); ?>">
+					&lt;?php the_post_thumbnail('medium-blog'); ?>
+			&lt;h3>&lt;?php the_title(); ?>&lt;/h3>
+				&lt;/a>
+				&lt;?php the_excerpt(); ?>
+
+		&lt;a href="&lt;?php the_permalink(); ?>" class="read-more">continue reading&lt;/a>
+			&lt;/li>
+			&lt;?php endwhile; wp_reset_postdata(); ?>
+		&lt;/ul>
+
+	&lt;/div>
+&lt;/div>
+			</code></pre>
+		</article><!-- .movie -->
+
+
+		<article id="video-0415" class="video">
+		<h3 class="titulo">4.15 Adding CSS to the latest 2 post</h>
+		<h4>On style.css<h4>
+			<pre><code class="language-css">
+	/*+ FRONT PAGE**/
+
+	div.bottom-front-page {
+		clear: both;
+	}
+	div.bottom-front-page .blog-tips h2{
+		text-align: left;
+		text-transform: lowercase;
+	}
+
+	div.bottom-front-page .blog-tips li {
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	div.bottom-front-page .blog-tips li h3 {
+		margin: 10px 0;
+	}
+	div.bottom-front-page .blog-tips li  a.read-more {
+		text-align: right;
+		display: block;
+		font-weight: bold;
+	}
+
+	@media only screen and (min-width : 480px) {
+		/** Front Page **/
+		div.bottom-front-page .blog-tips {
+			float: right;
+			width: 70%;
+		}
+		div.bottom-front-page .blog-tips li {
+			float: left;
+			width: 50%;
+			padding:0px 10px;
+		}
+		div.bottom-front-page .blog-tips h2{
+			padding-left: 10px;
+		}
+	}
+			</code></pre>
+		</article><!-- .movie -->
+
+
+		<article id="video-0416" class="video">
+		<h3 class="titulo">4.16 Querying a Page and showing in front-page.php</h>
+		<h4>On front-page.php<h4>
+			<pre><code class="language-php">
+				<div class="about-us">
+	&lt;?php $aboutUs = new WP_Query('page_id=11'); ?>
+
+	&lt;?php while($aboutUs->have_posts() ) : $aboutUs->the_post()  ?>
+
+	&lt;h2>&lt;?php the_title() ?>&lt;/h2>
+
+	&lt;?php the_excerpt(); ?>
+
+	&lt;?php endwhile;wp_reset_postdata(); ?>
+</div>
+			</code></pre>
+
+			<h4>On style.css<h4>
+				<pre><code class="language-css">
+					<div class="about-us">
+	@media only screen and (min-width : 480px) {
+		/** Front Page **/
+		div.bottom-front-page .about-us {
+			float: left;
+			width: 30%;
+			padding-right: 20px;
+		}
+
+	}
+	</div>
+				</code></pre>
+		</article><!-- .movie -->
+
+
+		<article id="video-0417" class="video">
+		<h3 class="titulo">4.17 Adding a JavaScript File to our functions.php</h>
+		<h4>On functions.php<h4>
+			<pre><code class="language-php">
+	wp_enqueue_script('jquery');
+	wp_enqueue_script('scripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'),'1.0', true );
+			</code></pre>
+
+			<h4>On footer.php<h4>
+				<pre><code class="language-php">
+&lt;?php wp_footer(); ?>
+				</code></pre>
+
+				<h4>On script.js<h4>
+					<pre><code class="language-javascript">
+	jQuery(document).ready(function() {
+		alert("it works!");
+	});
+					</code></pre>
+
+
+		</article><!-- .movie -->
+
+
+		<article id="video-0418" class="video">
+		<h3 class="titulo">4.18 Adding bxSlider to our Project</h>
+		<h4>On functions.php<h4>
+			<pre><code class="language-php">
+	wp_enqueue_style('bxslider', get_template_directory_uri() . '/css/jquery.bxslider.css' );
+	wp_enqueue_script('bxsliderjs', get_template_directory_uri() . '/js/jquery.bxslider.min.js', array('jquery'),'4.0', true );
+			</code></pre>
+		</article><!-- .movie -->
+
+		<article id="video-0419" class="video">
+		<h3 class="titulo">4.19 Writing the Custom Loop to show latest entries in our Slider</h>
+		<h4>On front-page.php<h4>
+			<pre><code class="language-php">
+&lt;div id="slider">
+	&lt;ul class="bxslider">
+		&lt;?php $args = array(
+			'posts_per_page' => 4,
+			'orderby' => 'date',
+			'order' => 'DESC',
+			'post_type' => 'post'
+		); ?>
+		&lt;?php $slider = new WP_Query($args); ?>
+		&lt;?php while($slider->have_posts()) : $slider->the_post()  ?>
+			&lt;li>
+				&lt;a href="&lt;?php the_permalink(); ?>">
+					&lt;?php the_post_thumbnail('featured'); ?>
+				&lt;/a>
+			&lt;/li>
+		&lt;?php endwhile; wp_reset_postdata(); ?>
+	&lt;/ul>
+&lt;/div> <!--#slider -->
+			</code></pre>
+
+			<h4>On scripts.js<h4>
+				<pre><code class="language-javascript">
+	( function($) {
+		  $('.bxslider').bxSlider({
+		  	mode: 'fade'
+		  });
+	}) (jQuery);
+				</code></pre>
+
+		</article><!-- .movie -->
+
+		<article id="video-0420" class="video">
+		<h3 class="titulo">4.20 Adding a new Widget Zone</h>
+			<h4>On functions.php</h4>
+			<pre><code class="language-php">
+	register_sidebar( array(
+		'name' 				=> __('Images Front Page'),
+		'id'				=> 'front-page',
+		'description'		=> 'Widgets in the front-page',
+		'before_widget' 	=> '&lt;div id="%1$s" class="widget %2$s">',
+		'after_widget'		=> '&lt;/div>',
+		'before_title' 		=> '&lt;h3 class="widget-title"	>',
+		'after_title'  		=> '&lt;/h3>',
+	) );
+			</code></pre>
+		</article><!-- .movie -->
+
+		<article id="video-0421" class="video">
+		<h3 class="titulo">4.21 Adding Image Widget Plugin and Printing widgets</h>
+			<h4>On front-page.php</h4>
+			<pre><code class="language-php">
+&lt;div class="what-to-visit">
+		&lt;?php dynamic_sidebar('front-page'); ?>
+&lt;/div> &lt;!--.what-to-visit-->
+			</code></pre>
+		</article><!-- .movie -->
+
+		<article id="video-0422" class="video">
+		<h3 class="titulo">4.22 Styling our widget images on front-page.php</h>
+			<h4>There are no code snippets for this video</h4>
+			<pre><code class="language-css">
+/** What to visit Widget area **/
+.what-to-visit .widget-title {
+	display: none;
+}
+.what-to-visit .widget_sp_image {
+	width:100%;
+	margin-bottom: 20px;
+}
+.what-to-visit .widget_sp_image img{
+	margin: 0 auto;
+	display: block;
+}
+.what-to-visit .widget_sp_image .widget_sp_image-description {
+	padding: 0 40px;
+}
+.what-to-visit .widget_sp_image p {
+	text-align: center;
+	background-color: #a00622;
+	border-radius: 20px;
+	font-size: 24px;
+	font-size: 2.4rem;
+	font-weight: bold;
+	color: #fff;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+@media only screen and (min-width : 768px) {
+	.what-to-visit .widget_sp_image {
+		float: left;
+		width: 33%;
+		text-align: center;
+	}
+}
+			</code></pre>
+		</article><!-- .movie -->
+
+		<article id="video-0423" class="video">
+		<h3 class="titulo">4.23 Creating Dynamic page titles for better SEO</h>
+			<h4>On header.php</h4>
+			<pre><code class="language-php">
+&lt;title>&lt;?php wp_title(''); ?>&lt;?php if(wp_title('', false)) { echo ' : '; } ?>&lt;?php bloginfo('name'); ?>&lt;/title>
+			</code></pre>
+		</article><!-- .movie -->
+
+
+		<article id="video-0424" class="video">
+		<h3 class="titulo">4.24 The get_template_part() function</h>
+		<h4>On functions.php<h4>
+			<pre><code class="language-php">
+
+				&lt;?php get_template_part('template-parts/slider') ?>
+
+				&lt;div class="bottom-front-page">
+					&lt;?php get_template_part('template-parts/about-us') ?>
+
+					&lt;?php get_template_part('template-parts/tips') ?>
+				&lt;/div>
+
+			</code></pre>
+		</article><!-- .movie -->
+
+		<article id="video-0425" class="video">
+		<h3 class="titulo">4.25 Screenshoot to Our Theme</h>
+		<h4>There are no Code Snippets for this video<h4>
+		</article><!-- .movie -->
+
+
+
+		   <article id="video-0426" class="video">
+	   	  <h3 class="titulo">4.26 Reviewing the Finished Theme</h>
+		   	<h4>There are no Code Snippets for this video<h4>
+			</article><!-- .movie -->
+</section>
+
+<section id="chapter-05" class="chapter">
+		<h2 class="chapter-title">Chapter 5: Building Our Second Theme - A Travel Agency Website</h2>
+
+		<article id="video-0500" class="video">
+		<h3 class="titulo">5.0 Why use a WordPress Starter Theme?</h3>
+		<h4>There´re no Code Snippets for this Video</h4>
+		</article><!-- .movie -->
+
+		<article id="video-0501" class="video">
+		<h3 class="titulo">5.1 Installing WordPress</h3>
+		<h4>There´re no Code Snippets for this Video</h4>
+		</article><!-- .movie -->
+
+		<article id="video-0502" class="video">
+		<h3 class="titulo">5.2 Downloading and Installing HTML5 Blank Theme</h3>
+		<h4>There´re no Code Snippets for this Video</h4>
+		<pre><code class="language-php">
+	/*
+		Theme Name: ATW Around the World
+		Theme URI:
+		Description: HTML5 Mobile First for travel Agency
+		Version: 1.0
+		Author: Juan Pablo De la torre Valdez (@JuanDevWP)
+		Author URI: http://easy-webdev.com
+		Tags: HTML5, CSS3, Mobile First
+
+		License: MIT
+		License URI: http://opensource.org/licenses/mit-license.php
+	*/
+		</code></pre>
+		</article><!-- .movie -->
+
+		<article id="video-0503" class="video">
+		<h3 class="titulo">5.3 Getting To Know HTML5 Blank Structure</h3>
+		<h4>There´re no Code Snippets for this Video</h4>
+		</article><!-- .movie -->
+
+		<article id="video-0504" class="video">
+		<h3 class="titulo">5.4 Reviewing the Files for this Theme</h3>
+		<h4>There´re no Code Snippets for this Video</h4>
+		</article><!-- .movie -->
+</section> <!--#chapter -->
+
+
+<section id="chapter-06" class="chapter">
+
+		<h2 class="chapter-title">Chapter 6: Preparing our theme for Development</h2>
+
+		<article id="video-0601" class="video">
+		<h3 class="titulo">6.1 Installing Developer Plugin</h3>
+		<h4>There´re no Code Snippets for this Video</h4>
+		</article><!-- .movie -->
+
+		<article id="video-0602" class="video">
+		<h3 class="titulo">6.2 Adding all the Pages</h3>
+		<h4>There´re no Code Snippets for this Video</h4>
+		</article><!-- .movie -->
+
+		<article id="video-0603" class="video">
+		<h3 class="titulo">6.3 Adjustments to The Theme and Reading</h3>
+		<h4>There´re no Code Snippets for this Video</h4>
+		</article><!-- .movie -->
+
+		<article id="video-0604" class="video">
+		<h3 class="titulo">6.4 Creating the Main Menu</h3>
+		<h4>There´re no Code Snippets for this Video</h4>
+		</article><!-- .movie -->
+
+		<article id="video-0605" class="video">
+		<h3 class="titulo">6.5 Changing CSS to our Menu</h3>
+		<h4>On style.css</h4>
+		<pre><code class="language-css">
+/* header */
+.header {
+	background-color: rgba(0,0,0,.7);
+}
+/* logo */
+.logo {
+	text-align: center;
+	margin-bottom: 20px;
+}
+.logo-img {
+	max-height: 73px;
+}
+@media only screen and (min-width:768px) {
+	/* logo */
+	.logo {
+		width: 40%;
+		float: left;
+		text-align: left;
+		margin-bottom: 0;
+	}
+	.logo-img {
+		max-height: 73px;
+	}
+}
+
+/* nav */
+.nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.nav ul li {
+	padding: 20px 0;
+	text-align: center;
+}
+.nav ul li.current_page_item {
+	background-color: #df7900;
+}
+.nav ul li a {
+	font-size:14px;
+	font-weight: bold;
+	color: #ffffff;
+	text-transform: uppercase;
+}
+@media only screen and (min-width:768px) {
+	nav {
+		height: 73px;
+		width: 60%;
+		float: right;
+	}
+	.nav ul {
+		height: 73px;
+		float: right;
+	}
+	.nav ul li {
+		float: left;
+		padding: 0 15px;
+		height: 100%;
+		line-height: 73px;
+	}
+}
+
+
+		</code></pre>
+		</article><!-- .movie -->
+
+		<article id="video-0606" class="video">
+		<h3 class="titulo">6.6 Installing Advanced Custom Fields Plugin</h3>
+		<h4>There´re no Code Snippets for this Video</h4>
+		</article><!-- .movie -->
+
+		<article id="video-0607" class="video">
+		<h3 class="titulo">6.7 Customizing the page.php</h3>
+		<h4>There´re no Code Snippets for this Video</h4>
+		</article><!-- .movie -->
+
+
+	</section> <!--#chapter-->
+
+
+
+
+	<section id="chapter-07" class="chapter">
+
+			<h2 class="chapter-title">Chapter 7: Working with About Us Page</h2>
+
+			<article id="video-0701" class="video">
+			<h3 class="titulo">7.1 Adding and Printing Featured Image</h3>
+			<h4>In header.php let´s add:</h4>
+			<pre><code class="language-php">
+&lt;?php the_post_thumbnail(); ?>
+			</code></pre>
+			</article><!-- .movie -->
+
+			<article id="video-0702" class="video">
+			<h3 class="titulo">7.2 Adding an Advanced Featured Image</h3>
+			<h4>In header.php let´s add:</h4>
+			<pre><code class="language-php">
+	&lt;?php if(is_page() )  { ?>
+		&lt;?php $featured = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full'); ?>
+		&lt;?php $featured = $featured[0]; ?>
+		&lt;div class="featuredImage" style="background-image:url(&lt;?php echo $featured ?>);">&lt;/div>
+	&lt;?php } ?>
+			</code></pre>
+			<h4>On style.css let´s add:</h4>
+
+			</article><!-- .movie -->
+
+			<article id="video-0703" class="video">
+			<h3 class="titulo">7.3 CSS to our Featured Image</h3>
+			<h4>On style.css let´s add:</h4>
+			<pre><code class="language-css">
+	div.featuredImage {
+		height: 300px;
+		background-size: cover;
+		width:100%;
+	}
+	/* header */
+	.header {
+
+	}
+	.header .navcanvas {
+		background-color: rgba(0,0,0, .7);
+
+	}
+	@media only screen and (min-width: 768px) {
+		.header .navcanvas {
+			position: absolute;
+			top: 20px;
+			left:0;
+			width: 100%;
+		}
+	}
+	</code></pre>
+			</article><!-- .movie -->
+
+
+			<article id="video-0704" class="video">
+			<h3 class="titulo">7.4 Adding our first Fields to our About us</h3>
+			<h4>There´re no Code Snippets for this video</h4>
+			</article><!-- .movie -->
+
+			<article id="video-0705" class="video">
+			<h3 class="titulo">7.5 Printing the Fields</h3>
+			<h4>In page-aboutus.php</h4>
+			<pre><code class="language-php">
+&lt;div class="about-us-images">
+
+&lt;?php if(get_field('image_1')) {?>
+&lt;img src="&lt;?php the_field('image_1'); ?>">
+&lt;?php } ?>
+
+&lt;?php if(get_field('image_2')) {?>
+&lt;img src="&lt;?php the_field('image_2'); ?>">
+&lt;?php } ?>
+
+&lt;/div>
+			</code></pre>
+			</article><!-- .movie -->
+
+
+			<article id="video-0706" class="video">
+			<h3 class="titulo">7.6 Checking if Field Exist before Printing</h3>
+			<h4>In page-aboutus.php let´s add:</h4>
+			<pre><code class="language-php">
+&lt;?php if  ( get_field('image_1') && get_field('image_2') )  { ?>
+
+&lt;div class="about-us-images">
+		&lt;div class="photo">
+			&lt;?php if(get_field('image_1')) {?>
+				&lt;img src="&lt;?php the_field('image_1'); ?>">
+			&lt;?php } ?>
+		&lt;/div>
+
+		&lt;div class="photo">
+			&lt;?php if(get_field('image_2')) {?>
+				&lt;img src="&lt;?php the_field('image_2'); ?>">
+			&lt;?php } ?>
+		&lt;/div>
+&lt;/div>
+
+&lt;?php  } ?>
+			</code></pre>
+			</article><!-- .movie -->
+
+			<article id="video-0707" class="video">
+					<h3 class="titulo">7.7 Adding a new Image Size in functions.php</h3>
+					<h4>In functions.php :</h4>
+					<pre><code class="language-php">
+add_image_size('medium', 350, 250, true);
+					</code></pre>
+			</article><!-- .movie -->
+
+			<article id="video-0708" class="video">
+					<h3 class="titulo">7.8 Adding a Class to our Image with PHP</h3>
+					<h4>In page-aboutus.php :</h4>
+					<pre><code class="language-php">
+&lt;?php
+	$image = get_field('imagen_2');
+	$size = 'medium';
+
+	if ($imagen) {
+		echo wp_get_attachment_image($image, $size, false, array('class' => 'polaroid'));
+	}
+?>
+					</code></pre>
+			</article><!-- .movie -->
+
+			<article id="video-0709" class="video">
+					<h3 class="titulo">7.9 Adding CSS to our Polaroid Class</h3>
+					<h4>In style.css :</h4>
+					<pre><code class="language-css">
+div.photo {
+	background-color: #ffffff;
+	display: block;
+	float: left;
+	width: auto;
+	margin: 0 00 27px 30px;
+	padding: 10px 10px 15px 10px;
+	-webkit-box-shadow: 0 3px 6px rgba(0,0,0,.25);
+	-moz-box-shadow: 0 3px 6px rgba(0,0,0,.25);
+	-webkit-transform: rotate(-10deg);
+	-moz-transform: rotate(-10deg);
+}
+div.photo:nth-child(even) {
+	-webkit-transform: rotate(10deg);
+	-moz-transform: rotate(10deg);
+	margin-top: -70px;
+}
+.polaroid {
+	-webkit-box-shadow: 0 3px 6px rgba(0,0,0,.25);
+	-moz-box-shadow: 0 3px 6px rgba(0,0,0,.25);
+	width: 100%;
+	height: auto;
+}
+					</code></pre>
+			</article><!-- .movie -->
+
+			<article id="video-0710" class="video">
+					<h3 class="titulo">7.10 Final Adjustments to Title and Text</h3>
+					<h4>In style.css :</h4>
+					<pre><code class="language-css">
+h2 {
+	color: #d4771e;
+	font-size: 28px;
+	text-align: center;
+	background-image: url(img/tituloBG.png);
+	background-repeat: repeat-x;
+	background-position: center center;
+	font-weight: normal;
+}
+h2 span {
+	padding: 0 25px;
+	background-color: #ffffff;
+}
+					</code></pre>
+
+					<h4>In style.css</h4>
+					<pre><code class="language-css">
+body {
+	font:300 16px/1.7 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	color:#000;
+}
+					</code></pre>
+				</article> <!--.video -->
+
+				<article id="video-0711" class="video">
+						<h3 class="titulo">7.11 Creating a Simple Grid for our Website</h3>
+						<h4>In style.css :</h4>
+						<pre><code class="language-css">
+/** GRID */
+[class*='grid'] {
+	float:left;
+	position: relative;
+	padding:0 20px 0 0;
+}
+
+.grid2-3 {
+	width: 66.6%;
+}
+.grid1-3 {
+	width: 33.3%;
+}
+
+.grid2-4 {
+width: 50%;otm
+}
+.grid1-4 {
+width: 25%;
+}
+.omega {
+	padding-right:0;
+}
+.omega:after {
+	content:"";
+	display:table;
+	clear:both;
+}
+				</code></pre>
+			</article>
+		</section>
+
+
+		<section id="chapter-08" class="chapter">
+		<h2 class="chapter-title">Chapter 08: Working with Tours Section</h2>
+
+			<article id="video-0800" class="video">
+			<h3 class="titulo">08.0 Taking a Look at Custom Post Types</h3>
+			<h4>There´re no code snippets for this video</h4>
+			</article><!-- .movie -->
+
+
+			<article id="video-0801" class="video">
+			<h3 class="titulo">08.1 Installing Custom Post Type UI Plugin</h3>
+			<h4>There´re no code snippets for this video</h4>
+			</article><!-- .movie -->
+
+			<article id="video-0802" class="video">
+			<h3 class="titulo">08.2 Creating Tours Custom Post Type</h3>
+			<h4>There´re no code snippets for this video</h4>
+			</article><!-- .movie -->
+
+			<article id="video-0803" class="video">
+			<h3 class="titulo">08.3 Adding Fields with Advanced Custom Fields</h3>
+			<h4>There´re no code snippets for this video</h4>
+			</article><!-- .movie -->
+
+			<article id="video-0804" class="video">
+			<h3 class="titulo">08.4 Adding some Tours to have data to work with</h3>
+			<h4>There´re no code snippets for this video</h4>
+			</article><!-- .movie -->
+
+			<article id="video-0805" class="video">
+			<h3 class="titulo">08.5 Adding page-tours.php</h3>
+			<h4>There´re no code snippets for this video</h4>
+			</article><!-- .movie -->
+
+			<article id="video-0806" class="video">
+			<h3 class="titulo">08.6 Writing a Custom Loop</h3>
+			<h4>On page-tours.php</h4>
+			<pre><code class="language-php">
+&lt;?php $args = array(
+	'post_type' => 'tours',
+	'posts_per_page' => -1,
+	'orderby' => 'title',
+	'order' => 'ASC',
+); ?>
+&lt;?php $tours = new WP_Query($args); while($tours->have_posts()): $tours->the_post(); ?>
+
+&lt;h3>&lt;?php the_title(); ?>&lt;/h3>
+
+&lt;?php endwhile; wp_reset_postdata();  ?>
+			</code></pre>
+			</article><!-- .movie -->
+
+			<article id="video-0807" class="video">
+			<h3 class="titulo">08.7 Printing Content to the template</h3>
+			<h4>On page-tours.php</h4>
+			<pre><code class="language-php">
+
+&lt;ul class="tours">
+&lt;?php $tours = new WP_Query($args); while($tours->have_posts()): $tours->the_post(); ?>
+
+&lt;li class="grid2-4">
+&lt;div class="featured-tour">
+	&lt;?php the_post_thumbnail('featuredTour'); ?>
+	&lt;a class="more-info"  href="&lt;?php the_permalink(); ?>">
+		&lt;img src="&lt;?php echo get_stylesheet_directory_uri(); ?>/img/moreinfo.png">
+	&lt;/a>
+&lt;/div> &lt;!--.featured-tour-->
+&lt;h3>&lt;a href="&lt;?php the_permalink(); ?>">&lt;?php the_title(); ?>&lt;/a>&lt;/h3>
+&lt;?php
+	$format = 'd F, Y';
+	$date = strtotime(get_field('leaving_date'));
+	$leavingDate = date_i18n($format, $date);
+
+	$returningDate = strtotime(get_field('returning_date'));
+	$returningDate = date_i18n($format, $returningDate);
+?>
+&lt;div class="date-price clear">
+	&lt;p class="date">&lt;?php echo $leavingDate; ?> - &lt;?php echo $returningDate; ?>&lt;/p>
+	&lt;p class="price">&lt;?php the_field('price'); ?>&lt;/p>
+&lt;/div> &lt;!--.date-price-->
+&lt;div class="clear">&lt;/div>
+
+&lt;div class="tour-description">
+	&lt;?php the_field('small_description'); ?>
+&lt;/div>
+
+&lt;/li>
+&lt;?php endwhile; wp_reset_postdata();  ?>
+&lt;/ul>
+			</code></pre>
+			<h4>On functions.php</h4>
+			<pre><code class="language-php">
+ add_image_size('featuredTour', 730, 390, true);
+			</code></pre>
+
+			</article><!-- .movie -->
+
+			<article id="video-0808" class="video">
+			<h3 class="titulo">08.8 Changing CSS to our Page-tours.php</h3>
+			<h4>On style.css</h4>
+			<pre><code class="language-css">
+
+/** Tours */
+ul.tours {
+	list-style: none;
+	padding:0;
+}
+ul.tours li {
+	margin: 0 auto 20px 0;
+}
+ul.tours li h3 {
+	margin: 5px 0;
+	font-size: 20px;
+	font-size: 2rem;
+}
+
+ul.tours li h3 a {
+	color:#e1800d;
+}
+ul.tours li p {
+	margin: 5px 0;
+}
+
+ul.tours li .featured-tour {
+	position: relative;
+}
+ul.tours li .featured-tour .more-info {
+    position: absolute;
+    top: 19px;
+    right: -12px;
+    width: 112px;
+}
+
+ul.tours li .date-price p.date{
+	float: left;
+	width: 60%;
+	margin-left: 5px;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+ul.tours li .date-price  p.price{
+	float: right;
+	width: 30%;
+	text-align: right;
+	color: #d4771e;
+	font-weight: bold;
+	margin-right: 5px;
+}
+ul.tours li .tour-description ul {
+	list-style: none;
+}
+
+ul.tours li .tour-description ul  li:before{ content:"-"; position:relative; left:-5px;}
+ul.tours li .tour-description ul  li{ text-indent:-5px; margin:0;}
+
+/*** GRID **/
+
+
+.omega {
+	padding-right: 0;
+}
+.omega:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+@media only screen and (min-width: 768px)  {
+	[class*='grid']{
+		float:left;
+		position: relative;
+		padding: 0 20px 0 0;
+	}
+	.grid2-3 {
+		width: 66.6%;
+	}
+
+	.grid1-3 {
+		width:33.3%;
+	}
+	.grid2-4{
+		width:50%;
+	}
+
+}
+			</code></pre>
+			</article><!-- .movie -->
+
+			<article id="video-0809" class="video">
+			<h3 class="titulo">08.9 Adding single-tours.php</h3>
+			<h4>There´re no code snippets for this video</h4>
+			</article><!-- .movie -->
+
+			<article id="video-0810" class="video">
+			<h3 class="titulo">08.10 Printing Fields to single-tours.php</h3>
+			<h4>There´re no code snippets for this video</h4>
+			<pre><code class="language-php">
+
+&lt;?php get_header(); ?>
+
+	&lt;main role="main">
+	&lt;!-- section -->
+	&lt;section>
+
+	&lt;?php if (have_posts()): while (have_posts()) : the_post(); ?>
+		&lt;!-- post title -->
+		&lt;h2>&lt;span>&lt;?php the_title(); ?>&lt;/span>&lt;/h2>
+		&lt;!-- /post title -->
+
+		&lt;!-- article -->
+		&lt;article id="post-&lt;?php the_ID(); ?>" &lt;?php post_class('grid2-3'); ?>>
+
+			&lt;!-- post thumbnail -->
+			&lt;?php if ( has_post_thumbnail()) : // Check if Thumbnail exists ?>
+					&lt;?php the_post_thumbnail(); // Fullsize image for the single post ?>
+			&lt;?php endif; ?>
+			&lt;!-- /post thumbnail -->
+
+			&lt;?php
+				$format = 'd F, Y';
+				$date = strtotime(get_field('leaving_date'));
+				$leavingDate = date_i18n($format, $date);
+
+				$returningDate = strtotime(get_field('returning_date'));
+				$returningDate = date_i18n($format, $returningDate);
+			?>
+			&lt;div class="tour-information">
+				&lt;p>&lt;strong>Leaving and Returning Date: &lt;/strong>&lt;?php echo $leavingDate . ' - '. $returningDate; ?> &lt;/p>
+				&lt;p>&lt;strong>Location for Departure:&lt;/strong> &lt;?php the_field('location'); ?> &lt;/p>
+				&lt;p>&lt;strong>Available Seats:&lt;/strong> &lt;?php the_field('available_seats'); ?> &lt;/p>
+				&lt;p>&lt;strong>Price:&lt;/strong>  &lt;?php the_field('price'); ?>&lt;/p>
+			&lt;/div>
+
+			&lt;div class="itinerary">
+				&lt;h3>Travel Itinerary&lt;/h3>
+				&lt;?php the_field('travel_itinerary'); ?>
+			&lt;/div>
+
+			&lt;?php edit_post_link(); // Always handy to have Edit Post Links available ?>
+
+		&lt;/article>
+		&lt;!-- /article -->
+
+		&lt;aside class="grid1-3">
+			&lt;?php the_content(); // Dynamic Content ?>
+		&lt;/aside>
+
+	&lt;?php endwhile; ?>
+
+	&lt;?php else: ?>
+
+		&lt;!-- article -->
+		&lt;article>
+
+			&lt;h1>&lt;?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?>&lt;/h1>
+
+		&lt;/article>
+		&lt;!-- /article -->
+
+	&lt;?php endif; ?>
+
+	&lt;/section>
+	&lt;!-- /section -->
+	&lt;/main>
+
+&lt;div class="clear">&lt;/div>
+
+&lt;?php get_footer(); ?>
+
+		</code></pre>
+			</article><!-- .movie -->
+
+			<article id="video-0811" class="video">
+			<h3 class="titulo">08.11 Changing CSS to our Fields</h3>
+			<h4>There´re no code snippets for this video</h4>
+			<pre><code class="language-css">
+div.featuredImage:after {
+	content:"";
+	position: absolute;
+	top:0;
+	left:0;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(223, 121, 0, .85);
+}
+@media only screen and (min-width: 768px)  {
+	.header .navcanvas {
+		position: absolute;
+		left:0;
+		top:20px;
+		width: 100%;
+		z-index: 20;
+	}
+}
+
+
+
+/** Tours Single**/
+div.tour-information {
+	margin-top: 20px;
+	background-color: #e3e3e3;
+	border: 1px solid #c0c0c0;
+	padding:20px;
+}
+div.tour-information p {
+	margin: 0 0 5px 0;
+}
+div.itinerary h3 {
+	font-size: 28px;
+	font-size: 2.8rem;
+	color: #e1800d;
+	text-align: center;
+}
+div.itinerary h2 {
+	text-align: left;
+	background-image: none;
+	margin-bottom: 0;
+}
+
+div.itinerary p {
+	margin: 0;
+}
+
+			</code></pre>
+			</article><!-- .movie -->
+
+			<article id="video-0812" class="video">
+			<h3 class="titulo">08.12 Creating a Gallery</h3>
+			<h4>There´re no code snippets for this video</h4>
+			</article><!-- .movie -->
+
+			<article id="video-0813" class="video">
+			<h3 class="titulo">08.13 Adding jQuery Fancybox</h3>
+			<h4>On functions.php</h4>
+			<pre><code class="language-php">
+  wp_enqueue_script('jquery');
+
+	wp_register_script('fancybox', get_template_directory_uri() . '/js/jquery.fancybox.js', array(), '2.1.5'); // fancybox
+  wp_enqueue_script('fancybox'); // Enqueue it!
+
+	wp_register_style('fancyboxcss', get_template_directory_uri() . '/css/jquery.fancybox.css', array(), '1.0', 'all');
+	wp_enqueue_style('fancyboxcss'); // Enqueue it!
+			</code></pre>
+			</article><!-- .movie -->
+
+
+			<article id="video-0814" class="video">
+			<h3 class="titulo">08.14 Adding the Code to our Gallery and WordPress</h3>
+			<h4>On script.js</h4>
+			<pre><code class="language-javascript">
+	jQuery('.gallery .gallery-item a').fancybox({
+		openEffect	: 'fade'
+	});
+			</code></pre>
+			<h4>On style.css</h4>
+			<pre><code class="language-css">
+.gallery .gallery-item {
+	height: 100px;
+	width: auto!important;
+	padding: 0 6px;
+}
+
+.gallery-item img {
+	border: none!important;
+	width: 100%;
+	height: 100px;
+}
+
+.gallery br {
+	display: none;
+}
+
+			</code></pre>
+			</article><!-- .movie -->
+
+		</section>
+
+
+
+				<section id="chapter-09" class="chapter">
+				<h2 class="chapter-title">Chapter 9: Working with Testimonials Section</h2>
+
+					<article id="video-0901" class="video">
+					<h3 class="titulo">09.1 Creating Testimonials Custom Post Type</h3>
+					<h4>There´re no code snippets for this video</h4>
+					</article><!-- .movie -->
+
+					<article id="video-0902" class="video">
+					<h3 class="titulo">09.2 Adding fields with Advanced Custom Fields</h3>
+					<h4>There´re no code snippets for this video</h4>
+					</article><!-- .movie -->
+
+					<article id="video-0903" class="video">
+					<h3 class="titulo">09.3 Adding some Testimonials to have data to work with</h3>
+					<h4>There´re no code snippets for this video</h4>
+					</article><!-- .movie -->
+
+					<article id="video-0904" class="video">
+					<h3 class="titulo">09.4 Adding page-testimonials.php</h3>
+					<h4>There´re no code snippets for this video</h4>
+					</article><!-- .movie -->
+
+					<article id="video-0905" class="video">
+					<h3 class="titulo">09.5 Writing a Custom Loop</h3>
+					<h4>On page-testimonials.php</h4>
+					<pre><code class="language-php">
+&lt;div class="testimonial-section">
+			&lt;?php $args = array(
+				'post_type' => 'testimonial',
+				'posts_per_page' => -1,
+				'orderby' => 'date',
+				'order' => 'DESC',
+			); ?>
+			&lt;ul class="testimonial-list">
+				&lt;?php $testimonial = new WP_Query($args); while($testimonial->have_posts()): $testimonial->the_post(); ?>
+				&lt;li>
+						&lt;h3>&lt;?php the_title(); ?>&lt;/h3>
+						&lt;div class="testimonial-content">
+							&lt;?php the_content(); ?>
+						&lt;/div>
+						&lt;div class="from-testimonial">
+							&lt;p>&lt;?php the_field('person_name') ?>&lt;/p>
+							&lt;p>&lt;?php the_field('from') ?>&lt;/p>
+						&lt;/div>
+				&lt;/li>
+				&lt;?php endwhile; wp_reset_postdata();  ?>
+			&lt;/ul>
+
+&lt;/div>	<!--.testimonial-section -->
+					</code></pre>
+					</article><!-- .movie -->
+
+					<article id="video-0906" class="video">
+					<h3 class="titulo">09.6 Styling Testimonials with CSS</h3>
+					<h4>On style.css</h4>
+					<pre><code class="language-css">
+/** Testimonials ***/
+blockquote {
+	border-left: 20px solid #e1800d;
+	padding: 5px 0 10px 10px;
+}
+.testimonial-list {
+	padding:0;
+	list-style: none;
+}
+.testimonial-list li {
+	background-color: #fefaf5;
+	border-left: 1px solid #a8a8a8;
+	border-right: 1px solid #a8a8a8;
+	border-bottom: 1px solid #a8a8a8;
+}
+.testimonial-list li h3 {
+	background-color: #e1800d;
+	padding: 5px 20px;
+	font-weight: normal;
+	color:#fff;
+}
+
+.testimonial-list li .testimonial-content {
+	padding-left: 80px;
+	position: relative;
+	padding-right: 10px;
+}
+.testimonial-list li .testimonial-content > p:before {
+	content: '"';
+	display: block;
+	position: absolute;
+	left:0;
+	top: 60px;
+	color: #616161;
+	font-size: 150px;
+	font-family: cursive;
+	line-height: 0;
+}
+.testimonial-list li .from-testimonial p {
+	color:#000;
+	font-weight: bold;
+	text-align: right;
+	padding-right: 20px;
+	margin:0 0 5px 0;
+	text-transform: uppercase;
+}
+@media only screen and (min-width: 768px)  {
+	.testimonials-wrapper {
+		max-width: 70%;
+		margin:0 auto;
+	}
+
+}
+					</code></pre>
+					</article><!-- .movie -->
+				</section>
+
+
+
+		<section id="chapter-10" class="chapter">
+		<h2 class="chapter-title">Chapter 10: Working with the Blog Template</h2>
+
+			<article id="video-1000" class="video">
+			<h3 class="titulo">10.00 Adding some data to work with</h3>
+			<h4>There´re no code snippets for this video</h4>
+			</article><!-- .movie -->
+
+			<article id="video-1001" class="video">
+			<h3 class="titulo">10.1 Adding a Featured Image</h3>
+			<h4>There´re no code snippets for this video</h4>
+			<pre><code class="language-php">
+	&lt;?php if (is_home() && get_option('page_for_posts') ) {
+		    $featured = wp_get_attachment_image_src(get_post_thumbnail_id(get_option('page_for_posts')),'full');
+		    $featured = $featured[0];
+		    ?>
+	    	&lt;div class="featuredImage" style="background-image:url(&lt;?php echo $featured ?>);">&lt;/div>
+	&lt;?php } else {?>
+					&lt;?php $featured = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full' ); ?>
+					&lt;?php $featured = $featured[0]; ?>
+					&lt;div class="featuredImage" style="background-image:url(&lt;?php echo $featured ?>);">&lt;/div>
+
+	&lt;?php } ?>
+
+
+			</code></pre>
+			</article><!-- .movie -->
+
+			<article id="video-1002" class="video">
+			<h3 class="titulo">10.2 Printing Our Fields</h3>
+			<h4>There´re no code snippets for this video</h4>
+			</article><!-- .movie -->
+
+			<article id="video-1003" class="video">
+			<h3 class="titulo">10.3 Changing CSS to our Blog</h3>
+			<h4>on loop.php</h4>
+			<pre><code class="language-php">
+&lt;?php the_post_thumbnail('feadturedBlog', array( 'class' => 'polaroid' )); // Declare pixel size you need inside the array ?>
+			</code></pre>
+			<h4>on style.css</h4>
+			<pre><code class="language-css">
+.post div.photo {
+	-webkit-transform: rotate(0deg);
+	-moz-transform: rotate(0deg);
+	transform: rotate(0deg);
+}
+
+/** Blog **/
+article.post h3 {
+	margin-top: 0;
+}
+article.post h3 a{
+	color: #e1800d;
+	font-size: 28px;
+	font-size:2.8rem;
+	font-weight: normal;
+}
+article.post a {
+	color: #e1800d;
+	font-weight: bold;
+}
+article.post .post-information {
+	text-align: right;
+	color:#5e5e5e;
+}
+article.post .post-information p{
+	margin-top: 0;
+}
+			</code></pre>
+
+			</article><!-- .movie -->
+
+			<article id="video-1004" class="video">
+			<h3 class="titulo">10.4 Changing single.php to suit our Needs</h3>
+			<h4>There´re no code snippets for this video</h4>
+			<pre><code class="language-php">
+&lt;?php get_header(); ?>
+
+	&lt;main role="main">
+	&lt;!-- section -->
+	&lt;section>
+
+	&lt;?php if (have_posts()): while (have_posts()) : the_post(); ?>
+
+		&lt;!-- article -->
+		&lt;article id="post-&lt;?php the_ID(); ?>" &lt;?php post_class(); ?>>
+
+			&lt;!-- post title -->
+			&lt;h2>&lt;span>&lt;?php the_title(); ?>&lt;/span>&lt;/h2>
+			&lt;!-- /post title -->
+
+			&lt;div class="clear">
+				&lt;div class="grid1-3 post-information">
+						&lt;!-- post details -->
+						&lt;span class="date">&lt;strong>&lt;?php _e( 'Published: ', 'html5blank' ); ?>&lt;/strong>&lt;?php the_time('F j, Y'); ?>&lt;/span>&lt;br/>
+						&lt;span class="author">&lt;strong>&lt;?php _e( 'by: ', 'html5blank' ); ?>&lt;/strong>&lt;?php the_author_posts_link(); ?>&lt;/span>
+						&lt;p>&lt;strong>&lt;?php _e( 'Category: ', 'html5blank' ); ?>&lt;/strong> &lt;?php  the_category(', '); // Separated by commas ?>&lt;/p>
+						&lt;!-- /post details -->
+				&lt;/div>
+
+				&lt;div class="grid2-3">
+					&lt;?php the_content(); // Dynamic Content ?>
+
+					&lt;?php edit_post_link(); // Always handy to have Edit Post Links available ?>
+
+					&lt;?php comments_template(); ?>
+				&lt;/div>
+			&lt;/div>
+
+		&lt;/article>
+		&lt;!-- /article -->
+
+	&lt;?php endwhile; ?>
+
+	&lt;?php else: ?>
+
+		&lt;!-- article -->
+		&lt;article>
+
+			&lt;h1>&lt;?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?>&lt;/h1>
+
+		&lt;/article>
+		&lt;!-- /article -->
+
+	&lt;?php endif; ?>
+
+	&lt;/section>
+	&lt;!-- /section -->
+	&lt;/main>
+
+&lt;?php get_footer(); ?>
+
+
+			</code></pre>
+			</article><!-- .movie -->
+
+			<article id="video-1005" class="video">
+			<h3 class="titulo">10.5 Adding Sharing Buttons to single.php</h3>
+			<h4>There´re no code snippets for this video</h4>
+			<pre><code class="language-markup">
+&lt;div class="share-buttons">
+	&lt;script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52f50abf5aba1fe1" async="async">&lt;/script>
+	&lt;div class="addthis_sharing_toolbox">&lt;/div>
+&lt;/div>
+			</code></pre>
+			</article><!-- .movie -->
+		</section><!-- Chapter -->
+
+		<section id="chapter-11" class="chapter">
+		<h2 class="chapter-title">Chapter 11: Working with Contact Us Page</h2>
+
+			<article id="video-1101" class="video">
+			<h3 class="titulo">11.1 Installing Contact Form 7</h3>
+			<h4>There´re no code snippets for this video</h4>
+			</article><!-- .movie -->
+
+			<article id="video-1102" class="video">
+			<h3 class="titulo">11.2 Creating and Adding our Contact Form</h3>
+			<h4>In Contact Tab on WordPress Backend</h4>
+<pre><code class="language-markup">
+
+&lt;h3>Yo´ve got Questions? Please Fill Out the Following Form&lt;/h3>
+
+&lt;p>Name: * &lt;br />
+    [text* name] &lt;/p>
+
+&lt;p>Email: *&lt;br />
+    [email* email] &lt;/p>
+
+
+&lt;p>Message: * &lt;br />
+    [textarea* message] &lt;/p>
+
+&lt;p>[submit "Send"]&lt;/p>
+
+</code></pre>
+
+			</article><!-- .movie -->
+
+			<article id="video-1103" class="video">
+			<h3 class="titulo">11.3 Changing CSS to our Form</h3>
+			<h4>On style.css</h4>
+			<pre><code class="language-css">
+/** Contact Form **/
+.wpcf7-form {
+	margin: 0 auto;
+}
+@media only screen and (min-width: 768px)  {
+	.wpcf7-form {
+		width: 40%;
+	}
+}
+.wpcf7-form h3 {
+	font-size:17px;
+	font-size:1.7rem;
+	text-align: center;
+	color:#e1800d;
+	border-bottom: 2px solid #e1800d;
+	padding-bottom: 5px;
+}
+.wpcf7-form input,
+.wpcf7-form textarea {
+	box-shadow: inset 0 0 10px #e1e1e1;
+	-moz-box-shadow: inset 0 0 10px #e1e1e1;
+	-webkit-box-shadow: inset 0 0 10px #e1e1e1;
+	border: 1px solid #c0c0c0;
+	height: 30px;
+	border-radius: 5px;
+	width: 100%;
+}
+.wpcf7-form textarea {
+	height: 200px;
+}
+.wpcf7-form p {
+	color: #000;
+}
+.wpcf7-form .wpcf7-submit {
+	box-shadow: none;
+	background-color: #df7900;
+	text-align: center;
+	padding: 5px 20px;
+	color: #fff;
+	font-weight: bold;
+	text-transform: uppercase;
+	border: none;
+	width: auto;
+	float: right;
+}
+			</code></pre>
+			</article><!-- .movie -->
+		</section><!-- Chapter -->
+
+		<section id="chapter-12" class="chapter">
+		<h2 class="chapter-title">Chapter 12: Finishing Home Page</h2>
+
+			<article id="video-1201" class="video">
+			<h3 class="titulo">12.1 Creating front-page.php</h3>
+			<h4>On header.php</h4>
+			<pre><code class="language-php">
+&lt;?php if(is_home() && get_option('page_for_posts') ) : ?>
+	&lt;?php $featured = wp_get_attachment_image_src( get_post_thumbnail_id(get_option('page_for_posts')), 'full' ); ?>
+	&lt;?php $featured = $featured[0]; ?>
+	&lt;div class="featuredImage" style="background-image:url(&lt;?php echo $featured ?>);">&lt;/div>
+&lt;?php elseif (is_front_page()): ?>
+&lt;section class="slider">
+		&lt;h1>Is Front&lt;/h1>
+&lt;/section>
+&lt;?php  else:  ?>
+	&lt;?php $featured = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full' ); ?>
+	&lt;?php $featured = $featured[0]; ?>
+	&lt;div class="featuredImage" style="background-image:url(&lt;?php echo $featured ?>);">&lt;/div>
+&lt;?php endif; ?>
+			</code></pre>
+			</article><!-- .movie -->
+
+			<article id="video-1202" class="video">
+			<h3 class="titulo">12.2 Adding a Custom Post Type for Slider</h3>
+			<h4>There Are no Code Snippets for this video</h4>
+	   </article>
+
+
+		 <article id="video-1203" class="video">
+		 <h3 class="titulo">12.3 Adding bxSlider JS</h3>
+		 <h4>On functions.php</h4>
+		 <pre><code class="language-php">
+
+ wp_register_style('bxslidercss', get_template_directory_uri() . '/css/jquery.bxslider.css', array(), '1.0', 'all');
+ wp_enqueue_style('bxslidercss'); // Enqueue it!
+
+ wp_register_script('bxsliderjs', get_template_directory_uri() . '/js/jquery.bxslider.js', array(), '4.1.2'); // bxslider
+ wp_enqueue_script('bxsliderjs'); // Enqueue it!
+
+		 </code></pre>
+		</article>
+
+
+		<article id="video-1204" class="video">
+		<h3 class="titulo">12.4 Adding some Slides to WordPress</h3>
+		<h4>There´re No Code Snippets for this video</h4>
+	 </article>
+
+	 <article id="video-1205" class="video">
+	 <h3 class="titulo">12.5 Adding an Action</h3>
+	 <h4>On functions.php</h4>
+	 <pre><code class="language-php">
+ function slider() {
+    echo "&lt;h1>hello world&lt;/h1>";
+ }
+ add_action('slider_index', 'slider');
+	 </code></pre>
+
+	 <h4>On header.php</h4>
+	 <pre><code class="language-php">
+&lt;?php do_action('slider_index'); ?>
+	 </code></pre>
+	</article>
+
+	<article id="video-1206" class="video">
+	<h3 class="titulo">12.6 WP_Query and Printing Slider</h3>
+	<h4>On functions.php</h4>
+	<pre><code class="language-php">
+function slider() {
+    $args = array(
+        'post_type'  => 'slider',
+        'orderby' => 'date',
+        'order' => 'DESC',
+        'posts_per_page' => -1
+    );
+
+    $slider = new WP_Query($args);
+    echo "&lt;ul class='slider'>";
+    while($slider->have_posts()): $slider->the_post();
+        echo "&lt;li>";
+        $link = get_field('link');
+        echo "&lt;a href='$link'>";
+        the_post_thumbnail('slider');
+        echo "&lt;/a>";
+        echo "&lt;/li>";
+    endwhile; wp_reset_postdata();
+    echo "&lt;/ul>";
+}
+add_action('slider_index', 'slider');
+</code></pre>
+
+<h4>On scripts.js</h4>
+<pre><code class="language-javascript">
+jQuery('ul.slider').bxSlider();
+</code></pre>
+  </article>
+
+
+	<article id="video-1207" class="video">
+	<h3 class="titulo">12.7 Finishing Up Slider with CSS</h3>
+	<h4>On style.css</h4>
+	<pre><code class="language-css">
+/** SLIDER **/
+section.slider {
+	margin-top: -100px;
+}
+ul.slider {
+	margin:0;
+	padding:0;
+}
+.bx-wrapper .bx-controls-direction a {
+  width: 44px;
+  height: 44px;
+  background:none;
+}
+.bx-wrapper .bx-viewport {
+	left: 0;
+	box-shadow: none;
+	border: none;
+}
+.bx-wrapper .bx-prev,
+.bx-wrapper .bx-prev:hover{
+	left: 30px;
+	background-image: url(css/images/prev.png)!important;
+}
+.bx-wrapper .bx-next,
+.bx-wrapper .bx-next:hover {
+	right: 30px;
+	background-image: url(css/images/next.png)!important;
+	background-position: 0px 0px!important;
+}
+	</code></pre>
+ </article>
+
+<article id="video-1208" class="video">
+ <h3 class="titulo">12.8 Changing Slides Order with a Plugin</h3>
+ <h4>On functions.php<h4>
+ <pre><code class="language-php">
+$args = array(
+	 'post_type'  => 'slider',
+	 'orderby' => 'menu_order',
+	 'order' => 'ASC',
+	 'posts_per_page' => -1
+);
+ </code></pre>
+</article>
+
+<article id="video-1209" class="video">
+ <h3 class="titulo">12.9 Writing Custom Loop to print Latest Tours</h3>
+ <h4>On front-page.php</h4>
+ <pre><code class="language-php">
+&lt;section class="upcoming-tours">
+	&lt;h2>&lt;span>Upcoming Travels&lt;/span>&lt;/h2>
+	&lt;?php
+	    $args = array(
+	        'post_type'  => 'tours',
+	        'orderby' => 'menu_order',
+	        'order' => 'ASC',
+	        'posts_per_page' => 3
+	    );
+	?>
+	&lt;ul>
+	&lt;?php $tours = new WP_Query($args);
+		  while($tours->have_posts()): $tours->the_post(); ?>
+	&lt;?php endwhile; wp_reset_postdata(); ?>
+	&lt;/ul>
+&lt;/section> &lt;!--upcoming-tours-->
+ </code></pre>
+</article>
+
+<article id="video-1210" class="video">
+ <h3 class="titulo">12.10 Printing Tags and Fields to our front-page.php</h3>
+ <h4>On functions.php inside our Loop:</h4>
+ <pre><code class="language-php">
+	 &lt;li class="grid1-3">
+		 &lt;div class="image">
+			 &lt;a href="&lt;?php the_permalink(); ?>">
+				 &lt;img class="more" src="&lt;?php echo get_stylesheet_directory_uri(); ?>/img/moreinfo.png">
+			 &lt;/a>
+			 &lt;?php the_post_thumbnail('tourFront'); ?>
+		 &lt;/div>
+		 &lt;div class="content-tours">
+			 &lt;h3>&lt;?php the_title(); ?>&lt;/h3>
+				 &lt;?php
+					 // dates
+						 $format = 'd F, Y';
+						 $date = strtotime(get_field('leaving_date'));
+						 $leavingDate = date_i18n($format, $date);
+
+						 $returningDate = strtotime(get_field('returning_date'));
+						 $returningDate = date_i18n($format, $returningDate);
+					?>
+			 &lt;p class="date">&lt;?php echo $leavingDate . ' - ' . $returningDate ?>&lt;/p>
+		 &lt;/div>
+	 &lt;/li>
+ </code></pre>
+ <h4>On functions.php</h4>
+ <pre><code class="language-php">
+add_image_size('tourFront', 430, 300, true);
+ </code></pre>
+</article>
+
+
+<article id="video-1211" class="video">
+ <h3 class="titulo">12.11 Dealing with Responsive Images in WordPress</h3>
+ <h4>On functions.php</h4>
+ <pre><code class="language-php">
+ /**
+ * Create function my_responsive_thumbnail() to output responsive featured image
+ * Function can be called from within the loop of any template file using
+ * my_responsive_thumbnail(get_the_ID());
+ */
+
+ function my_responsive_thumbnail($post_id){
+ // Get the featured image ID
+ $attachment_id = get_post_thumbnail_id($post_id);
+
+ // Get the info for each image size including the original (full)
+ $thumb_large    = wp_get_attachment_image_src($attachment_id, 'tourFront');
+ $thumb_medium   = wp_get_attachment_image_src($attachment_id, 'featuredTour');
+
+ // Create array containing each image size + the alt tag
+ $thumb_data = array(
+     'thumb_large'    => $thumb_large[0],
+     'thumb_medium'   => $thumb_medium[0],
+ );
+
+ // Echo out &lt;picture> element based on code from above
+ echo '&lt;picture>';
+ echo '&lt;!--[if IE 9]>&lt;video style="display: none;">&lt;![endif]-->'; // Fallback for IE9
+ echo '&lt;source srcset="' . $thumb_data['thumb_large'] . ', ' . $thumb_data['thumb_large'] . ' " media="(min-width: 800px)">';
+ echo '&lt;source srcset="' . $thumb_data['thumb_medium'] . ', ' . $thumb_data['thumb_medium'] . ' ">';
+ echo '&lt;!--[if IE 9]>&lt;/video>&lt;![endif]-->'; // Fallback for IE9
+ echo '&lt;img srcset="' . $thumb_data['thumb_large'] . ', ' . $thumb_data['thumb_large'] .' " >';
+ echo '&lt;/picture>';
+ }
+ </code></pre>
+
+ <h4>On functions.php</h4>
+ <pre><code class="language-php">
+ wp_register_script('picturefill', get_template_directory_uri() . '/js/picturefill.js', array(), '4.1.2'); // Fancybox
+ wp_enqueue_script('picturefill'); // Enqueue it!
+ </code></pre>
+</article>
+
+<article id="video-1212" class="video">
+ <h3 class="titulo">12.12 Changing CSS to our Latest tours</h3>
+ <h4>On style.css</h4>
+ <pre><code class="language-css">
+/** FRONT PAGE **/
+ /* Tours **/
+ .upcoming-tours ul {
+ 	list-style: none;
+ 	padding:0;
+ }
+ .upcoming-tours li div.image {
+ 	position: relative;
+ }
+ .upcoming-tours li div.image .more {
+     position: absolute;
+     right: -13px;
+     top: 14px;
+     width: 116px;
+ }
+ .upcoming-tours li div.content-tour {
+ 	background-color: #e1800d;
+ 	padding-top: 10px;
+ 	padding-bottom: 10px;
+ }
+ .upcoming-tours li div.content-tour h3,
+ .upcoming-tours li div.content-tour p {
+ 	margin:0;
+ 	text-align: center;
+ 	color:#fff;
+ }
+ </code></pre>
+</article>
+
+<article id="video-1213" class="video">
+ <h3 class="titulo">12.13 Printing Latest Blog Entries</h3>
+ <h4>On front-page.php<h4>
+ <pre><code class="language-php">
+
+&lt;div class="bottom-content">
+ 	&lt;section class="latest-entries grid2-3">
+ 		&lt;h2>&lt;span>Travel Tips From our Blog&lt;/span>&lt;/h2>
+ 		&lt;ul>
+ 			&lt;?php
+ 			    $args = array(
+ 			        'post_type'  => 'post',
+ 			        'posts_per_page' => 2
+ 			    );
+ 			    $tips = new WP_Query($args); while($tips->have_posts()): $tips->the_post();
+ 			?>
+ 			&lt;li class="clear">
+ 				&lt;div class="imagetips grid1-3">
+ 					&lt;?php the_post_thumbnail('medium'); ?>
+ 				&lt;/div> &lt;!--.image-tips-->
+ 				&lt;div class="content-tip grid2-3 omega">
+ 					&lt;h3>&lt;?php the_title(); ?>&lt;/h3>
+ 					&lt;?php html5wp_excerpt('html5wp_index'); ?>
+ 				&lt;/div> &lt;!--.content-tip-->
+ 			&lt;/li>
+ 			&lt;?php endwhile; wp_reset_postdata(); ?>
+ 		&lt;/ul>
+ 	&lt;/section>  &lt;!--.latest-entries -->
+
+ 	&lt;section class="latest-testimonials grid1-3 omega">
+ 		&lt;h2>&lt;span>Testimonials&lt;/span>&lt;/h2>
+ 	&lt;/section>
+&lt;/div> &lt;!--.bottom-content-->
+
+ </code></pre>
+</article>
+
+<article id="video-1214" class="video">
+ <h3 class="titulo">12.14 Changing CSS to our latest entries</h3>
+ <h4>On style.css</h4>
+ <pre><code class="language-css">
+ /** Latest Tips **/
+ .latest-entries ul{
+ 	margin:0;
+ 	padding:0;
+ 	list-style: none;
+ }
+ .latest-entries ul li {
+ 	margin-bottom: 20px;
+ }
+ .latest-entries ul li h3 {
+ 	margin:0;
+ 	font-size: 20px;
+ 	font-size: 2.2rem;
+ 	color: #e1800d;
+ }
+ .latest-entries ul li p {
+ 	margin:0;
+ 	font-size: 14px;
+ 	font-size: 1.4rem;
+ }
+ .latest-entries ul li a.view-article {
+     background-color: #e1800d;
+     color: #fff;
+     font-weight: bold;
+     text-transform: uppercase;
+     display: block;
+     clear: left;
+     padding: 5px 14px;
+     border-radius: 9px;
+     width: 40%;
+     text-align: center;
+     margin-top: 8px;
+ }
+ </code></pre>
+</article>
+
+<article id="video-1215" class="video">
+ <h3 class="titulo">12.15 Writing a loop to show testimonials in our Home Page</h3>
+ <h4>On front-page.php<h4>
+ <pre><code class="language-php">
+
+ &lt;section class="latest-testimonials grid1-3 omega">
+		&lt;h2>&lt;span>Testimonials&lt;/span>&lt;/h2>
+			&lt;?php $args = array(
+				'post_type' => 'testimonial',
+				'posts_per_page' => 2,
+				'orderby' => 'date',
+				'order' => 'DESC',
+			); ?>
+			&lt;ul>
+				&lt;?php $testimonial = new WP_Query($args); while($testimonial->have_posts()): $testimonial->the_post(); ?>
+				&lt;li>
+						&lt;div class="testimonial-content quote">
+							&lt;?php html5wp_excerpt('html5wp_custom_post'); ?>
+								&lt;div class="from-testimonial">
+									&lt;?php $name = get_field('person_name'); ?>
+									&lt;?php $from = get_field('from'); ?>
+									&lt;p>&lt;strong> &lt;?php echo $name . ", " . $from ?>&lt;/strong>&lt;/p>
+								&lt;/div> &lt;!--.from-testimonial-->
+						&lt;/div> &lt;!--.testimonial-content-->
+				&lt;/li>
+				&lt;?php endwhile; wp_reset_postdata();  ?>
+			&lt;/ul>
+			&lt;a href="&lt;?php echo get_permalink(11); ?>" class="button">View All&lt;/a>
+	&lt;/section>
+
+ </code></pre>
+</article>
+
+<article id="video-1216" class="video">
+ <h3 class="titulo">12.16 Styling our Testimonials in the home Page</h3>
+ <h4>On style.css</h4>
+ <pre><code class="language-css">
+/** Testimonials **/
+.latest-testimonials  ul {
+	padding:0;
+	list-style: none;
+}
+.latest-testimonials ul li {
+	margin-bottom:20px;
+}
+.latest-testimonials ul li .testimonial-content {
+	padding-left: 70px;
+
+}
+.latest-testimonials ul li .testimonial-content p{
+	margin: 0 0 10px 0;
+}
+.latest-testimonials ul li .testimonial-content a {
+	display: none;
+}
+.quote {
+	position: relative;
+}
+.quote p:before {
+	content:  '“';
+	display: block;
+	position: absolute;
+	left:10px;
+	top: 60px;
+	color: #616161;
+	font-size: 150px;
+	 font-family: 'Pontano Sans', sans-serif;
+	line-height: 0;
+}
+.latest-testimonials .quote p:before  {
+	color:#999;
+}
+.button,
+.button:hover {
+	background-color: #e1800d;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #fff;
+	text-align: center;
+	padding:5px 20px;
+	border-radius: 9px;
+}
+
+.latest-testimonials  .button{
+	float: right;
+}
+
+ </code></pre>
+</article>
+
+<article id="video-1217" class="video">
+ <h3 class="titulo">12.17 Finishing the Footer</h3>
+ <h4>There´re no Code Snippets for this Video</h4>
+</article>
+
+<article id="video-1218" class="video">
+ <h3 class="titulo">12.18 Adding a Widget with Text to our Footer</h3>
+ <h4>On footer.php</h4>
+ <pre><code class="language-php">
+&lt;footer class="footer " role="contentinfo">
+
+	 &lt;?php if(!function_exists('dynamic_sidebar') || !dynamic_sidebar('widget-area-2')) ?>
+
+&lt;/footer>
+ </code></pre>
+</article>
+
+<article id="video-1219" class="video">
+ <h3 class="titulo">12.19 Printing Upcoming Travels in Footer with a Widget</h3>
+ <h4>Let´s create a widgets.php file and include it on the functions.php</h4>
+ <pre><code class="language-php">
+
+	 /** Our Widgets**/
+	 if(file_exists(dirname(__FILE__) . '/inc/widgets.php')) {
+	     require_once  dirname(__FILE__)  . '/inc/widgets.php';
+	 }
+ </code></pre>
+ <h4>On widgets.php</h4>
+ <pre><code class="language-php">
+	 /**
+	  * Adds upcoming_tours widget.
+	  */
+	 class UpcomingTours extends WP_Widget {
+
+	     /**
+	      * Register widget with WordPress.
+	      */
+	     function __construct() {
+	         parent::__construct(
+	             'upcoming_tours', // Base ID
+	             __( 'Upcoming Tours', 'text_domain' ), // Name
+	             array( 'description' => __( 'Show 2 random tours in footer', 'text_domain' ), ) // Args
+	         );
+	     }
+
+	     /**
+	      * Front-end display of widget.
+	      *
+	      * @see WP_Widget::widget()
+	      *
+	      * @param array $args     Widget arguments.
+	      * @param array $instance Saved values from database.
+	      */
+	     public function widget( $args, $instance ) {
+	         echo $args['before_widget'];
+	         if ( ! empty( $instance['title'] ) ) {
+	             echo $args['before_title'] . apply_filters( 'widget_title', $instance['title'] ). $args['after_title'];
+	         }
+	                 $query = array(
+	                     'post_type' => 'tours',
+	                     'posts_per_page' => 2,
+	                     'orderby' => 'title',
+	                     'order' => 'ASC',
+	                 ); ?>
+	                 &lt;ul class="tours list-footer">
+	                     &lt;?php $tours = new WP_Query($query); while($tours->have_posts()): $tours->the_post(); ?>
+
+	                     &lt;li class="clear">
+	                         &lt;div class="featured-tour grid2-4">
+	                             &lt;?php the_post_thumbnail('thumbnail'); ?>
+	                         &lt;/div> &lt;!--.featured-tour-->
+
+	                         &lt;div class="content-tour grid2-4 omega">
+	                             &lt;h3>
+	                                 &lt;a href= &lt;?php the_permalink(); ?>">
+	                                     &lt;?php the_title(); ?>
+	                                 &lt;/a>
+	                             &lt;/h3>
+	                         &lt;/div> &lt;!--.content-tour-->
+	                     &lt;/li>
+
+
+	                     &lt;?php endwhile; wp_reset_postdata();  ?>
+	                 &lt;/ul>
+
+	 &lt;?php echo $args['after_widget'];
+	     }
+
+	     /**
+	      * Back-end widget form.
+	      *
+	      * @see WP_Widget::form()
+	      *
+	      * @param array $instance Previously saved values from database.
+	      */
+	     public function form( $instance ) {
+	         $title = ! empty( $instance['title'] ) ? $instance['title'] : __( 'New title', 'text_domain' );
+	         ?>
+	         &lt;p>
+	         &lt;label for= &lt;?php echo $this->get_field_id( 'title' ); ?>" &lt;?php _e( 'Title:' ); ? &lt;/label>
+	         &lt;input class="widefat" id= &lt;?php echo $this->get_field_id( 'title' ); ?>" name= &lt;?php echo $this->get_field_name( 'title' ); ?>" type="text" value= &lt;?php echo esc_attr( $title ); ?>">
+	         &lt;/p>
+	         &lt;?php
+	     }
+
+	     /**
+	      * Sanitize widget form values as they are saved.
+	      *
+	      * @see WP_Widget::update()
+	      *
+	      * @param array $new_instance Values just sent to be saved.
+	      * @param array $old_instance Previously saved values from database.
+	      *
+	      * @return array Updated safe values to be saved.
+	      */
+	     public function update( $new_instance, $old_instance ) {
+	         $instance = array();
+	         $instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
+
+	         return $instance;
+	     }
+	 } // class upcoming_tours
+	 // register upcoming_tours widget
+	 function register_upcoming_tours() {
+	     register_widget( 'UpcomingTours' );
+	 }
+	 add_action( 'widgets_init', 'register_upcoming_tours' );
+ </code></pre>
+</article>
+
+<article id="video-1220" class="video">
+ <h3 class="titulo">12.20 Printing Random blog Entries with a Widget</h3>
+ <h4>On widgets.php</h4>
+ <pre><code class="language-php">
+	 /**
+	  * Adds random_tips widget.
+	  */
+	 class randomTips extends WP_Widget {
+
+	     /**
+	      * Register widget with WordPress.
+	      */
+	     function __construct() {
+	         parent::__construct(
+	             'random_tips', // Base ID
+	             __( 'ATW Random Tips', 'text_domain' ), // Name
+	             array( 'description' => __( 'Show 2 random tips in footer', 'text_domain' ), ) // Args
+	         );
+	     }
+
+	     /**
+	      * Front-end display of widget.
+	      *
+	      * @see WP_Widget::widget()
+	      *
+	      * @param array $args     Widget arguments.
+	      * @param array $instance Saved values from database.
+	      */
+	     public function widget( $args, $instance ) {
+	         echo $args['before_widget'];
+	         if ( ! empty( $instance['title'] ) ) {
+	             echo $args['before_title'] . apply_filters( 'widget_title', $instance['title'] ). $args['after_title'];
+	         }
+	                 $query = array(
+	                     'post_type' => 'post',
+	                     'posts_per_page' => 2,
+	                     'orderby' => 'title',
+	                     'order' => 'ASC',
+	                 ); ?>
+	                 &lt;ul class="tours">
+	                     &lt;?php $tours = new WP_Query($query); while($tours->have_posts()): $tours->the_post(); ?>
+
+	                     &lt;li class="clear">
+	                         &lt;div class="featured-tour grid2-4">
+	                             &lt;?php the_post_thumbnail('thumbnail'); ?>
+	                         &lt;/div> &lt;!--.featured-tour-->
+
+	                         &lt;div class="content-tour grid2-4 omega">
+	                             &lt;h3>
+	                                 &lt;a href="&lt;?php the_permalink(); ?>">
+	                                     &lt;?php the_title(); ?>
+	                                 &lt;/a>
+	                             &lt;/h3>
+	                         &lt;/div> &lt;!--.content-tour-->
+	                     &lt;/li>
+
+
+	                     &lt;?php endwhile; wp_reset_postdata();  ?>
+	                 &lt;/ul>
+
+	 &lt;?php echo $args['after_widget'];
+	     }
+
+	     /**
+	      * Back-end widget form.
+	      *
+	      * @see WP_Widget::form()
+	      *
+	      * @param array $instance Previously saved values from database.
+	      */
+	     public function form( $instance ) {
+	         $title = ! empty( $instance['title'] ) ? $instance['title'] : __( 'New title', 'text_domain' );
+	         ?>
+	         &lt;p>
+	         &lt;label for="&lt;?php echo $this->get_field_id( 'title' ); ?>">&lt;?php _e( 'Title:' ); ?>&lt;/label>
+	         &lt;input class="widefat" id="&lt;?php echo $this->get_field_id( 'title' ); ?>" name="&lt;?php echo $this->get_field_name( 'title' ); ?>" type="text" value="&lt;?php echo esc_attr( $title ); ?>">
+	         &lt;/p>
+	         &lt;?php
+	     }
+
+	     /**
+	      * Sanitize widget form values as they are saved.
+	      *
+	      * @see WP_Widget::update()
+	      *
+	      * @param array $new_instance Values just sent to be saved.
+	      * @param array $old_instance Previously saved values from database.
+	      *
+	      * @return array Updated safe values to be saved.
+	      */
+	     public function update( $new_instance, $old_instance ) {
+	         $instance = array();
+	         $instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
+
+	         return $instance;
+	     }
+
+	 } // class random_tips
+
+
+	 // register random_tips widget
+	 function register_random_tips() {
+	     register_widget( 'randomTips' );
+	 }
+	 add_action( 'widgets_init', 'register_random_tips' );
+ </code></pre>
+</article>
+
+<article id="video-1221" class="video">
+ <h3 class="titulo">12.21 Creating Coupons Post Type</h3>
+ <h4>There´no Code Snippets for this video</h4>
+</article>
+
+<article id="video-1222" class="video">
+ <h3 class="titulo">12.22 Printing the Coupons in the Footer with a Widget</h3>
+ <h4>On widgets.php</h4>
+<pre><code class="language-php">
+	 /**
+	  * Adds Coupons widget.
+	  */
+	 class couponsWidget extends WP_Widget {
+
+	     /**
+	      * Register widget with WordPress.
+	      */
+	     function __construct() {
+	         parent::__construct(
+	             'coupons_widget', // Base ID
+	             __( 'ATW Coupons', 'text_domain' ), // Name
+	             array( 'description' => __( 'Show 2 Coupons', 'text_domain' ), ) // Args
+	         );
+	     }
+
+	     /**
+	      * Front-end display of widget.
+	      *
+	      * @see WP_Widget::widget()
+	      *
+	      * @param array $args     Widget arguments.
+	      * @param array $instance Saved values from database.
+	      */
+	     public function widget( $args, $instance ) {
+	         echo $args['before_widget'];
+	         if ( ! empty( $instance['title'] ) ) {
+	             echo $args['before_title'] . apply_filters( 'widget_title', $instance['title'] ). $args['after_title'];
+	         }
+	                 $query = array(
+	                     'post_type' => 'coupons',
+	                     'posts_per_page' => 2,
+	                     'orderby' => 'title',
+	                     'order' => 'ASC',
+	                 ); ?>
+	                 &lt;ul class="coupons">
+	                     &lt;?php $coupons = new WP_Query($query); while($coupons->have_posts()): $coupons->the_post(); ?>
+
+	                     &lt;li class="clear">
+	                         &lt;div class="featured-tour">
+	                            &lt;img src="&lt;?php the_field('image'); ?>">
+	                         &lt;/div> &lt;!--.featured-tour-->
+	                     &lt;/li>
+
+
+	                     &lt;?php endwhile; wp_reset_postdata();  ?>
+	                 &lt;/ul>
+
+	 &lt;?php echo $args['after_widget'];
+	     }
+
+	     /**
+	      * Back-end widget form.
+	      *
+	      * @see WP_Widget::form()
+	      *
+	      * @param array $instance Previously saved values from database.
+	      */
+	     public function form( $instance ) {
+	         $title = ! empty( $instance['title'] ) ? $instance['title'] : __( 'New title', 'text_domain' );
+	         ?>
+	         &lt;p>
+	         &lt;label for="&lt;?php echo $this->get_field_id( 'title' ); ?>">&lt;?php _e( 'Title:' ); ?>&lt;/label>
+	         &lt;input class="widefat" id="&lt;?php echo $this->get_field_id( 'title' ); ?>" name="&lt;?php echo $this->get_field_name( 'title' ); ?>" type="text" value="&lt;?php echo esc_attr( $title ); ?>">
+	         &lt;/p>
+	         &lt;?php
+	     }
+
+	     /**
+	      * Sanitize widget form values as they are saved.
+	      *
+	      * @see WP_Widget::update()
+	      *
+	      * @param array $new_instance Values just sent to be saved.
+	      * @param array $old_instance Previously saved values from database.
+	      *
+	      * @return array Updated safe values to be saved.
+	      */
+	     public function update( $new_instance, $old_instance ) {
+	         $instance = array();
+	         $instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
+
+	         return $instance;
+	     }
+
+	 } // class random_tips
+
+
+	 // register random_tips widget
+	 function register_coupon_widget() {
+	     register_widget( 'couponsWidget' );
+	 }
+	 add_action( 'widgets_init', 'register_coupon_widget' );
+ </code></pre>
+
+</article>
+
+<article id="video-1223" class="video">
+ <h3 class="titulo">12.23 Styling the Footer</h3>
+ <h4>On style.css line: 182</h4>
+
+ <pre><code class="language-css">
+ /* footer */
+ .footer {
+ 	background-color: #323232;
+ 	border-top: 6px solid #df7900;
+ 	margin-top: 20px;
+ 	padding:20px 0 0 0;
+ }
+ .footer h3,
+ .footer .textwidget,
+ .footer  div h3 a {
+ 	color: #fff!important;
+ }
+ .footer  div h3 a {
+ 	font-size: 16px;
+ 	font-size: 1.6rem;
+ }
+ .footer .wp-post-image {
+ 	border: 3px solid #464646;
+ }
+ #coupons_widget-2 h3{
+ 	display: none;
+ }
+ .footer ul.coupons li{
+ 	margin-bottom: 20px;
+ }
+ .copyright {
+ 	margin-top: 10px;
+ 	padding:10px 0;
+ /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#cb60b3+0,474747+50,de47ac+100&amp;0+0,1+50,0+100 */
+ background: -moz-linear-gradient(left,  rgba(203,96,179,0) 0%, rgba(71,71,71,1) 50%, rgba(222,71,172,0) 100%); /* FF3.6+ */
+ background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(203,96,179,0)), color-stop(50%,rgba(71,71,71,1)), color-stop(100%,rgba(222,71,172,0))); /* Chrome,Safari4+ */
+ background: -webkit-linear-gradient(left,  rgba(203,96,179,0) 0%,rgba(71,71,71,1) 50%,rgba(222,71,172,0) 100%); /* Chrome10+,Safari5.1+ */
+ background: -o-linear-gradient(left,  rgba(203,96,179,0) 0%,rgba(71,71,71,1) 50%,rgba(222,71,172,0) 100%); /* Opera 11.10+ */
+ background: -ms-linear-gradient(left,  rgba(203,96,179,0) 0%,rgba(71,71,71,1) 50%,rgba(222,71,172,0) 100%); /* IE10+ */
+ background: linear-gradient(to right,  rgba(203,96,179,0) 0%,rgba(71,71,71,1) 50%,rgba(222,71,172,0) 100%); /* W3C */
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00cb60b3', endColorstr='#00de47ac',GradientType=1 ); /* IE6-9 */
+
+ }
+ .copyright p {
+ 	text-align: center;
+ 	color: #fff;
+ 	font-weight: bold;
+ 	margin: 0;
+ }
+ </code></pre>
+</article>
+		</section> <!-- Chapter -->
+
+
+		<section id="chapter-13" class="chapter">
+		<h2 class="chapter-title">Chapter 13: Final Adjustments</h2>
+
+			<article id="video-1301" class="video">
+			<h3 class="titulo">13.1 Adding a Google Font</h3>
+			<h4>On functions.php</h4>
+			<pre><code class="language-php">
+	wp_register_style('latoFont', 'https://fonts.googleapis.com/css?family=Lato:400,700,900', array(), '1.0', 'all');
+  wp_enqueue_style('latoFont');
+			</code></pre>
+			<h4>On style.css</h4>
+			<pre><code class="language-css">
+h1,h2,h3 {
+    font-family: 'Lato', arial,helvetica, sans-serif;
+}
+			</code></pre>
+			</article><!-- .movie -->
+
+			<article id="video-1302" class="video">
+				<h3 class="titulo">13.2 Adding a CSS3 Transition to our Menu</h3>
+				<h4>On style.css</h4>
+				<pre><code class="language-css">
+		.nav ul li {
+	    transition: all .3s ease-in;
+		}
+	    .nav ul li:hover {
+	        background-color: #df7900;
+	    }
+		    </code></pre>
+			</article><!-- .movie -->
+
+			<article id="video-1303" class="video">
+				<h3 class="titulo">13.3 Adding a Search Input to our Website</h3>
+				<h4>On header.php</h4>
+				<pre><code class="language-php">
+		&lt;div class="search-form">
+				&lt;?php get_search_form(); ?>
+		&lt;/div>
+		    </code></pre>
+
+				<h4>On style.css</h4>
+				<pre><code class="language-css">
+	/** SEARCH FORM **/
+	.search-form{
+	    margin:20px 0;
+	}
+	.search-form form {
+	    position: relative;
+	}
+	.search-form form input,
+	.search-form form input:focus{
+	    width: 100%;
+	    border: 2px solid #e1e1e1;
+	    border-radius: 10px;
+	    height: 30px;
+	}
+	.search-form form button.search-submit {
+	    position: absolute;
+	    right: -6px;
+	    top:0;
+	    height: 35px;
+	    background-color: #e1800d;
+	    border: none;
+	    outline: none;
+	    color: #fff;
+	    border-top-right-radius: 10px;
+	    border-bottom-right-radius: 10px;
+	}
+	@media only screen and (min-width: 768px) {
+	    .search-form form input {
+	        width: 30%;
+	        float: right;
+	        -webkit-transition: width .3s ease-in-out;
+	        -moz-transition: width .3s ease-in-out;
+	        -o-transition: width .3s ease-in-out;
+	        transition: width .3s ease-in-out;
+	    }
+	    .search-form form input:focus {
+	        width: 50%;
+	    }
+	}
+		    </code></pre>
+			</article><!-- .movie -->
+
+			<article id="video-1304" class="video">
+				<h3 class="titulo">13.4 Fixing the search Template</h3>
+				<h4>On style.css</h4>
+				<pre><code class="language-css">
+/** Blog **/
+article h3{
+	margin-top: 0;
+}
+article h3 a{
+	color: #e1800d;
+	font-size: 28px;
+	font-size:2.8rem;
+	font-weight: normal;
+}
+article  a{
+	color: #e1800d;
+	font-weight: bold;
+}
+article .post-information {
+	color:#5e5e5e;
+}
+@media only screen and (min-width: 768px)  {
+    article  .post-information {
+		text-align: right;
+	}
+}
+article  p {
+	margin-top: 0;
+}
+				</code></pre>
+			</article>
+
+			<article id="video-1305" class="video">
+				<h3 class="titulo">13.5 Adding an Advanced Responsive Menu</h3>
+				<h4>On Functions.php</h4>
+				<pre><code class="language-php">
+wp_register_script('slickNav', get_template_directory_uri() . '/js/jquery.slicknav.min.js', array(), '1.0.4'); // Fancybox
+wp_enqueue_script('slickNav');
+
+wp_register_style('slicknavCss', get_template_directory_uri() . '/css/slicknav.min.css', array(), '1.0', 'all');
+wp_enqueue_style('slicknavCss'); // Enqueue it!
+				</code></pre>
+
+				<h4>On scripts.js</h4>
+				<pre><code class="language-javascript">
+
+jQuery('header nav ul').slicknav();
+				</code>
+				</pre>
+			</article><!-- .movie -->
+
+			<article id="video-1306" class="video">
+				<h3 class="titulo">13.6 Styling the Responsive Menu</h3>
+				<h4>On style.css</h4>
+				<pre><code class="language-css">
+/* nav */
+.nav {
+    display: none;
+}
+.nav ul,
+ul.slicknav_nav {
+	list-style: none;
+	padding:0;
+	margin:0;
+}
+.nav ul li,
+ul.slicknav_nav li{
+	padding: 12px 0;
+	text-align: center;
+}
+.nav ul li.current_page_item,
+ul.slicknav_nav li.current_page_item{
+	background-color: #df7900;
+}
+.nav ul li a,
+ul.slicknav_nav li a {
+	font-size: 14px;
+	font-size: 1.4rem;
+	font-weight: bold;
+	color: #fff;
+	text-transform: uppercase;
+}
+
+.slicknav_menu .slicknav_btn {
+    background-color: #EF7803;
+}
+.slicknav_menu span.slicknav_menutxt {
+    text-shadow: none;
+}
+@media only screen and (min-width: 768px) {
+    .slicknav_menu {
+        display:none!important;
+    }
+	.nav {
+		height: 73px;
+		width: 60%;
+		float: right;
+        display: block;
+	}
+	.nav ul {
+		height: 73px;
+		float: right;
+	}
+	.nav ul li {
+		float: left;
+		padding: 0 15px;
+		height: 100%;
+		line-height: 73px;
+        transition: all .3s ease-in;
+	}
+    .nav ul li:hover {
+        background-color: #df7900;
+    }
+}
+
+				</code></pre>
+			</article><!-- .movie -->
+
+			<article id="video-1307" class="video">
+				<h3 class="titulo">13.7 Screenshot for our Theme</h3>
+				<h4>There´re no Code Snippets for this movie</h4>
+			</article><!-- .movie -->
+
+		</section>
+
+</div> <!--.container -->
+
+<style>
+body {
+	background-color: #006495;
+}
+h2 {
+	margin:0;
+}
+section.chapter {
+	background-color: #fff;
+	padding:20px;
+	margin-bottom: 20px;
+}
+article:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+h3.titulo {
+	color:#006495;
+}
+a.botton {
+	color:#fff;
+	background-color:#006495;
+	float:right;
+	font-family: arial, helvetica, sans-serif;
+	text-decoration: none;
+	padding: 5px 20px;
+	margin-top: 20px;
+	border-radius: 10px;
+	font-size: 12px;
+	text-transform: uppercase;
+}
+</style>
+
+<script>
+	$(document).ready(function() {
+		$( ".video" ).append( "<a data-scroll href='#toc' class='botton'>go to top</a>" );
+		smoothScroll.init();
+	});
+</script>
+</body>
+</html>
